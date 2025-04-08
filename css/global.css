@@ -1,31 +1,31 @@
-/* Global Styles for AuctionHub - Enhanced Professional Design */
+/* Global Styles for AuctionHub - Monochromatic Black and White with Maroon Accents */
 
 :root {
-  --primary-color: #b80afc;
-  --primary-gradient: linear-gradient(135deg, #b80afc 0%, #9013fe 100%);
-  --primary-dark: #9908d0;
-  --primary-light: #c72cfd;
-  --secondary-color: #1a1a2e;
-  --accent-color: #ff9900;
-  --accent-gradient: linear-gradient(135deg, #ff9900 0%, #ff5500 100%);
+  --primary-color: #800000;
+  --primary-gradient: linear-gradient(135deg, #800000 0%, #5a0000 100%);
+  --primary-dark: #5a0000;
+  --primary-light: #a52a2a;
+  --secondary-color: #1a1a1a;
+  --accent-color: #800000;
+  --accent-gradient: linear-gradient(135deg, #800000 0%, #5a0000 100%);
   --light-color: #f8f9fa;
-  --dark-color: #16213e;
-  --success-color: #00b894;
-  --danger-color: #ff4757;
-  --warning-color: #ffa502;
-  --info-color: #2e86de;
-  --gray-color: #6c757d;
-  --gray-light-color: #e9ecef;
-  --gray-dark-color: #343a40;
-  --body-bg: #f0f2f5;
+  --dark-color: #121212;
+  --success-color: #2e7d32;
+  --danger-color: #c62828;
+  --warning-color: #800000;
+  --info-color: #424242;
+  --gray-color: #757575;
+  --gray-light-color: #e0e0e0;
+  --gray-dark-color: #212121;
+  --body-bg: #f5f5f5;
   --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   --transition-speed: 0.3s;
   --border-radius: 10px;
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: 1px solid rgba(255, 255, 255, 0.2);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --neon-shadow: 0 0 10px rgba(184, 10, 252, 0.5), 0 0 20px rgba(184, 10, 252, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --neon-shadow: 0 0 10px rgba(128, 0, 0, 0.5), 0 0 20px rgba(128, 0, 0, 0.3);
 }
 
 body {
@@ -127,7 +127,7 @@ body {
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item.active {
-  background-color: rgba(184, 10, 252, 0.1);
+  background-color: rgba(128, 0, 0, 0.1);
   color: var(--primary-light);
 }
 
@@ -155,7 +155,7 @@ body {
 
 .navbar .search-form .form-control:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(184, 10, 252, 0.2);
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
   width: 180px;
 }
 
@@ -411,7 +411,7 @@ body {
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item.active {
-  background-color: rgba(184, 10, 252, 0.1);
+  background-color: rgba(128, 0, 0, 0.1);
   color: var(--primary-light);
 }
 
@@ -437,7 +437,7 @@ body {
 
 .navbar .search-form .form-control:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(184, 10, 252, 0.2);
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
   width: 220px;
 }
 
@@ -596,14 +596,14 @@ body {
 .btn-primary {
   background: var(--primary-gradient);
   border: none;
-  box-shadow: 0 4px 15px rgba(184, 10, 252, 0.4);
+  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.4);
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: linear-gradient(135deg, #9908d0 0%, #7e10d5 100%) !important;
-  box-shadow: 0 6px 20px rgba(184, 10, 252, 0.6) !important;
+  background: linear-gradient(135deg, #5a0000 0%, #400000 100%) !important;
+  box-shadow: 0 6px 20px rgba(128, 0, 0, 0.6) !important;
   transform: translateY(-2px);
 }
 
@@ -619,7 +619,7 @@ body {
   background: var(--primary-gradient) !important;
   border-color: transparent !important;
   color: white !important;
-  box-shadow: 0 4px 15px rgba(184, 10, 252, 0.4);
+  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.4);
 }
 
 /* Card Styling - Professional */
@@ -688,7 +688,7 @@ body {
   color: var(--primary-color);
   font-size: 1.3rem;
   display: block;
-  background: linear-gradient(135deg, var(--primary-color), #9013fe);
+  background: linear-gradient(135deg, var(--primary-color), #5a0000);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -732,7 +732,7 @@ body {
   font-weight: 800;
   text-align: center;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--primary-color), #9013fe);
+  background: linear-gradient(135deg, var(--primary-color), #5a0000);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -841,7 +841,7 @@ body {
 .social-icons a:hover {
   background: var(--primary-gradient);
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(184, 10, 252, 0.4);
+  box-shadow: 0 5px 15px rgba(128, 0, 0, 0.4);
 }
 
 /* Countdown Styling - Professional */
@@ -911,7 +911,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 999;
-  box-shadow: 0 5px 15px rgba(184, 10, 252, 0.4);
+  box-shadow: 0 5px 15px rgba(128, 0, 0, 0.4);
 }
 
 .back-to-top.active {
@@ -921,7 +921,7 @@ body {
 
 .back-to-top:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(184, 10, 252, 0.6);
+  box-shadow: 0 8px 20px rgba(128, 0, 0, 0.6);
 }
 
 /* Global Search Results */
@@ -1071,7 +1071,7 @@ body {
 .hero-slider .swiper-button-next,
 .hero-slider .swiper-button-prev {
   color: white;
-  background: rgba(184, 10, 252, 0.7);
+  background: rgba(128, 0, 0, 0.7);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1135,7 +1135,7 @@ body {
 }
 
 .category-card:hover .category-overlay {
-  background: linear-gradient(to top, rgba(184, 10, 252, 0.8), transparent);
+  background: linear-gradient(to top, rgba(128, 0, 0, 0.8), transparent);
 }
 
 .category-overlay h3 {
@@ -1210,7 +1210,7 @@ body {
 
 /* Newsletter Section */
 .newsletter {
-  background: linear-gradient(rgba(184, 10, 252, 0.9), rgba(144, 19, 254, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(90, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80");
   background-size: cover;
   background-position: center;
@@ -1251,7 +1251,7 @@ body {
 
 /* Sell CTA Section */
 .sell-cta {
-  background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)),
+  background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
     url("https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-position: center;
@@ -1316,7 +1316,7 @@ body {
 }
 
 .collection-card:hover .collection-overlay {
-  background: linear-gradient(to top, rgba(184, 10, 252, 0.8), transparent);
+  background: linear-gradient(to top, rgba(128, 0, 0, 0.8), transparent);
 }
 
 .collection-overlay h3 {
@@ -1332,7 +1332,7 @@ body {
 
 /* Stats Section */
 .stats-section {
-  background: linear-gradient(rgba(184, 10, 252, 0.9), rgba(144, 19, 254, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(90, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607435097405-db48f377bff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
   background-size: cover;
   background-position: center;
@@ -1524,12 +1524,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--primary-color), #9013fe);
+  background: linear-gradient(to bottom, var(--primary-color), #5a0000);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #9908d0, #7e10d5);
+  background: linear-gradient(to bottom, #5a0000, #400000);
 }
 
 /* Toast Notifications */
@@ -1545,13 +1545,13 @@ body {
 /* Auction Timer Animation */
 @keyframes timerPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(184, 10, 252, 0.4);
+    box-shadow: 0 0 0 0 rgba(128, 0, 0, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(184, 10, 252, 0);
+    box-shadow: 0 0 0 10px rgba(128, 0, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(184, 10, 252, 0);
+    box-shadow: 0 0 0 0 rgba(128, 0, 0, 0);
   }
 }
 
@@ -1571,5 +1571,5 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
   z-index: 2;
-  box-shadow: 0 3px 10px rgba(184, 10, 252, 0.4);
+  box-shadow: 0 3px 10px rgba(128, 0, 0, 0.4);
 }
