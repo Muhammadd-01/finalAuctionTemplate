@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
 }
 
 .hero-slider .slide-content {
@@ -45,7 +45,7 @@
 .hero-slider .swiper-button-next,
 .hero-slider .swiper-button-prev {
   color: white;
-  background: rgba(184, 10, 252, 0.7);
+  background: rgba(128, 0, 0, 0.7);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -87,7 +87,7 @@
 .hot-auctions .swiper-button-next,
 .hot-auctions .swiper-button-prev {
   color: white;
-  background: rgba(184, 10, 252, 0.7);
+  background: rgba(128, 0, 0, 0.7);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -139,7 +139,7 @@
 }
 
 .category-card:hover .category-overlay {
-  background: linear-gradient(to top, rgba(184, 10, 252, 0.8), transparent);
+  background: linear-gradient(to top, rgba(128, 0, 0, 0.8), transparent);
 }
 
 .category-overlay h3 {
@@ -215,7 +215,7 @@
 
 /* Newsletter Section */
 .newsletter {
-  background: linear-gradient(rgba(184, 10, 252, 0.9), rgba(144, 19, 254, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(64, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80");
   background-size: cover;
   background-position: center;
@@ -256,7 +256,7 @@
 
 /* Sell CTA Section */
 .sell-cta {
-  background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-position: center;
@@ -321,7 +321,7 @@
 }
 
 .collection-card:hover .collection-overlay {
-  background: linear-gradient(to top, rgba(184, 10, 252, 0.8), transparent);
+  background: linear-gradient(to top, rgba(128, 0, 0, 0.8), transparent);
 }
 
 .collection-overlay h3 {
@@ -337,7 +337,7 @@
 
 /* Stats Section */
 .stats-section {
-  background: linear-gradient(rgba(184, 10, 252, 0.9), rgba(144, 19, 254, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(64, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607435097405-db48f377bff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
   background-size: cover;
   background-position: center;
@@ -349,15 +349,15 @@
 .stats-section .stat-item {
   padding: 30px;
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(128, 0, 0, 0.2);
   transition: all var(--transition-speed);
 }
 
 .stats-section .stat-item:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(128, 0, 0, 0.3);
 }
 
 .stats-section .stat-number {

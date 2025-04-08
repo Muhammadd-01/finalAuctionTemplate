@@ -2,16 +2,16 @@
 
 /* Global Variables */
 :root {
-    --primary-color: #b80afc;
-    --primary-light: #d67aff;
-    --primary-dark: #8800c7;
-    --secondary-color: #f8f0ff;
+    --primary-color: #800000;
+    --primary-light: #a52a2a;
+    --primary-dark: #4d0000;
+    --secondary-color: #f5f5f5;
     --text-color: #333333;
     --light-text: #ffffff;
     --dark-text: #222222;
     --border-color: #e0e0e0;
-    --shadow-color: rgba(184, 10, 252, 0.15);
-    --gradient-primary: linear-gradient(135deg, #b80afc 0%, #8800c7 100%);
+    --shadow-color: rgba(128, 0, 0, 0.15);
+    --gradient-primary: linear-gradient(135deg, #800000 0%, #4d0000 100%);
   }
   
   /* Navbar Styles */
@@ -384,7 +384,7 @@
     bottom: -50px;
     left: 0;
     right: 0;
-    background: rgba(184, 10, 252, 0.8);
+    background: rgba(128, 0, 0, 0.8);
     padding: 0.75rem 0;
     display: flex;
     justify-content: center;

@@ -1,17 +1,17 @@
-/* Global Styles for AuctionHub - Monochromatic Black and White with Maroon Accents */
+/* Global Styles for AuctionHub - Meronish Black and White Theme */
 
 :root {
   --primary-color: #800000;
-  --primary-gradient: linear-gradient(135deg, #800000 0%, #5a0000 100%);
-  --primary-dark: #5a0000;
+  --primary-gradient: linear-gradient(135deg, #800000 0%, #4d0000 100%);
+  --primary-dark: #4d0000;
   --primary-light: #a52a2a;
-  --secondary-color: #1a1a1a;
+  --secondary-color: #000000;
   --accent-color: #800000;
-  --accent-gradient: linear-gradient(135deg, #800000 0%, #5a0000 100%);
-  --light-color: #f8f9fa;
-  --dark-color: #121212;
+  --accent-gradient: linear-gradient(135deg, #800000 0%, #4d0000 100%);
+  --light-color: #ffffff;
+  --dark-color: #000000;
   --success-color: #2e7d32;
-  --danger-color: #c62828;
+  --danger-color: #800000;
   --warning-color: #800000;
   --info-color: #424242;
   --gray-color: #757575;
@@ -22,8 +22,8 @@
   --card-hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   --transition-speed: 0.3s;
   --border-radius: 10px;
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(0, 0, 0, 0.7);
+  --glass-border: 1px solid rgba(128, 0, 0, 0.2);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   --neon-shadow: 0 0 10px rgba(128, 0, 0, 0.5), 0 0 20px rgba(128, 0, 0, 0.3);
 }
@@ -127,7 +127,7 @@ body {
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item.active {
-  background-color: rgba(128, 0, 0, 0.1);
+  background-color: rgba(128, 0, 0, 0.2);
   color: var(--primary-light);
 }
 
@@ -196,7 +196,7 @@ body {
 }
 
 .navbar .nav-icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(128, 0, 0, 0.2);
   color: white;
 }
 
@@ -411,7 +411,7 @@ body {
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item.active {
-  background-color: rgba(128, 0, 0, 0.1);
+  background-color: rgba(128, 0, 0, 0.2);
   color: var(--primary-light);
 }
 
@@ -478,7 +478,7 @@ body {
 }
 
 .navbar .nav-icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(128, 0, 0, 0.2);
   color: white;
 }
 
@@ -602,7 +602,7 @@ body {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: linear-gradient(135deg, #5a0000 0%, #400000 100%) !important;
+  background: linear-gradient(135deg, #4d0000 0%, #330000 100%) !important;
   box-shadow: 0 6px 20px rgba(128, 0, 0, 0.6) !important;
   transform: translateY(-2px);
 }
@@ -666,7 +666,7 @@ body {
   font-size: 0.8rem;
   z-index: 1;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(128, 0, 0, 0.3);
 }
 
 .bid-count {
@@ -680,7 +680,7 @@ body {
   font-size: 0.8rem;
   z-index: 1;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(128, 0, 0, 0.3);
 }
 
 .current-bid {
@@ -688,7 +688,7 @@ body {
   color: var(--primary-color);
   font-size: 1.3rem;
   display: block;
-  background: linear-gradient(135deg, var(--primary-color), #5a0000);
+  background: linear-gradient(135deg, var(--primary-color), #4d0000);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -732,7 +732,7 @@ body {
   font-weight: 800;
   text-align: center;
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--primary-color), #5a0000);
+  background: linear-gradient(135deg, var(--primary-color), #4d0000);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -817,7 +817,7 @@ body {
 }
 
 .footer a:hover {
-  color: white;
+  color: var(--primary-light);
   transform: translateX(5px);
 }
 
@@ -954,7 +954,7 @@ body {
 }
 
 .search-result-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(128, 0, 0, 0.2);
 }
 
 .search-result-item img {
@@ -1010,7 +1010,7 @@ body {
 
 .badge-warning {
   background: var(--warning-color);
-  color: var(--dark-color);
+  color: white;
 }
 
 .badge-info {
@@ -1019,11 +1019,11 @@ body {
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(128, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Hero Section Styling */
@@ -1045,7 +1045,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
 }
 
 .hero-slider .slide-content {
@@ -1210,7 +1210,7 @@ body {
 
 /* Newsletter Section */
 .newsletter {
-  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(90, 0, 0, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(64, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80");
   background-size: cover;
   background-position: center;
@@ -1251,7 +1251,7 @@ body {
 
 /* Sell CTA Section */
 .sell-cta {
-  background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-position: center;
@@ -1332,7 +1332,7 @@ body {
 
 /* Stats Section */
 .stats-section {
-  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(90, 0, 0, 0.9)),
+  background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(64, 0, 0, 0.9)),
     url("https://images.unsplash.com/photo-1607435097405-db48f377bff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
   background-size: cover;
   background-position: center;
@@ -1344,15 +1344,15 @@ body {
 .stats-section .stat-item {
   padding: 30px;
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(128, 0, 0, 0.2);
   transition: all var(--transition-speed);
 }
 
 .stats-section .stat-item:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(128, 0, 0, 0.3);
 }
 
 .stats-section .stat-number {
@@ -1524,12 +1524,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--primary-color), #5a0000);
+  background: linear-gradient(to bottom, var(--primary-color), #4d0000);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #5a0000, #400000);
+  background: linear-gradient(to bottom, #4d0000, #330000);
 }
 
 /* Toast Notifications */
