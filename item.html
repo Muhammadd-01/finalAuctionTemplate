@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="css/item.css">
 </head>
 <body>
-    <!-- Enhanced Professional Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="fas fa-gavel me-2"></i>AuctionHub
@@ -31,58 +31,52 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <i class="fas fa-home me-1"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="about.html">
-                            <i class="fas fa-info-circle me-1"></i> About
-                        </a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-th-large me-1"></i> Categories
+                            Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="books.html"><i class="fas fa-book me-2"></i>Books</a></li>
-                            <li><a class="dropdown-item" href="furniture.html"><i class="fas fa-couch me-2"></i>Furniture</a></li>
-                            <li><a class="dropdown-item" href="electronics.html"><i class="fas fa-laptop me-2"></i>Electronics</a></li>
-                         
+                            <li><a class="dropdown-item" href="books.html">Books</a></li>
+                            <li><a class="dropdown-item" href="furniture.html">Furniture</a></li>
+                            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="current-bidding.html">
-                            <i class="fas fa-gavel me-1"></i> Current Bidding
-                        </a>
+                        <a class="nav-link" href="current-bidding.html">Current Bidding</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sell.html">
-                            <i class="fas fa-tag me-1"></i> Sell an Item
-                        </a>
+                        <a class="nav-link" href="sell.html">Sell an Item</a>
                     </li>
                 </ul>
-                <form class="d-flex me-3 search-form">
+                <form class="d-flex me-2">
                     <div class="input-group">
-                        <input class="form-control" type="search" id="globalSearch" placeholder="Search items...">
-                        <button class="btn" type="submit">
+                        <input class="form-control" type="search" placeholder="Search items...">
+                        <button class="btn btn-outline-light" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </form>
-                <div class="d-flex align-items-center nav-right">
-                    <a href="notifications.html" class="nav-icon">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill">3</span>
-                    </a>
-                    <a href="profile.html" class="nav-icon">
-                        <i class="fas fa-user"></i>
-                    </a>
-                    <div class="nav-buttons">
-                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
-                        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-                    </div>
-                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill bg-danger">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -97,19 +91,19 @@
                         <div class="swiper itemSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1606986565168-96fd7c0c95b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Leica Camera" class="img-fluid">
+                                    <img src="images/items/camera-large.jpg" alt="Vintage Leica Camera" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Leica Camera Angle 1" class="img-fluid">
+                                    <img src="images/items/camera-angle1.jpg" alt="Vintage Leica Camera Angle 1" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Leica Camera Angle 2" class="img-fluid">
+                                    <img src="images/items/camera-angle2.jpg" alt="Vintage Leica Camera Angle 2" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Leica Camera Angle 3" class="img-fluid">
+                                    <img src="images/items/camera-angle3.jpg" alt="Vintage Leica Camera Angle 3" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage Leica Camera Case" class="img-fluid">
+                                    <img src="images/items/camera-case.jpg" alt="Vintage Leica Camera Case" class="img-fluid">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -119,19 +113,19 @@
                         <div class="swiper itemThumbnailSwiper mt-3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1606986565168-96fd7c0c95b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 1" class="img-fluid">
+                                    <img src="images/items/camera-large.jpg" alt="Thumbnail 1" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 2" class="img-fluid">
+                                    <img src="images/items/camera-angle1.jpg" alt="Thumbnail 2" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 3" class="img-fluid">
+                                    <img src="images/items/camera-angle2.jpg" alt="Thumbnail 3" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1495707902641-75cac588d2e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 4" class="img-fluid">
+                                    <img src="images/items/camera-angle3.jpg" alt="Thumbnail 4" class="img-fluid">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 5" class="img-fluid">
+                                    <img src="images/items/camera-case.jpg" alt="Thumbnail 5" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -280,7 +274,7 @@
                                 <div class="tab-pane fade" id="seller" role="tabpanel" aria-labelledby="seller-tab">
                                     <div class="seller-info">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Seller" class="seller-avatar me-3">
+                                            <img src="images/users/seller.jpg" alt="Seller" class="seller-avatar me-3">
                                             <div>
                                                 <h6 class="mb-0">VintageCollector58</h6>
                                                 <div class="seller-rating">
@@ -302,17 +296,17 @@
                                         <div class="row">
                                             <div class="col-6 col-md-4 mb-2">
                                                 <a href="#" class="seller-item">
-                                                    <img src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Other Item" class="img-fluid rounded">
+                                                    <img src="images/items/camera2-small.jpg" alt="Other Item" class="img-fluid rounded">
                                                 </a>
                                             </div>
                                             <div class="col-6 col-md-4 mb-2">
                                                 <a href="#" class="seller-item">
-                                                    <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Other Item" class="img-fluid rounded">
+                                                    <img src="images/items/lens-small.jpg" alt="Other Item" class="img-fluid rounded">
                                                 </a>
                                             </div>
                                             <div class="col-6 col-md-4 mb-2">
                                                 <a href="#" class="seller-item">
-                                                    <img src="https://images.unsplash.com/photo-1599912248916-89e2b8e0395a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Other Item" class="img-fluid rounded">
+                                                    <img src="images/items/film-small.jpg" alt="Other Item" class="img-fluid rounded">
                                                 </a>
                                             </div>
                                         </div>
@@ -339,7 +333,7 @@
                 <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100">
                         <div class="card-img-container">
-                            <img src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Vintage Nikon Camera">
+                            <img src="images/items/camera2.jpg" class="card-img-top" alt="Vintage Nikon Camera">
                             <div class="time-left">
                                 <i class="fas fa-clock me-1"></i>
                                 <span class="countdown" data-time="2023-12-29T18:00:00">5d 10h 15m</span>
@@ -363,7 +357,7 @@
                 <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100">
                         <div class="card-img-container">
-                            <img src="https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Vintage Lens">
+                            <img src="images/items/lens.jpg" class="card-img-top" alt="Vintage Lens">
                             <div class="time-left">
                                 <i class="fas fa-clock me-1"></i>
                                 <span class="countdown" data-time="2023-12-27T12:30:00">3d 4h 45m</span>
@@ -387,7 +381,7 @@
                 <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100">
                         <div class="card-img-container">
-                            <img src="https://images.unsplash.com/photo-1599912248916-89e2b8e0395a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Vintage Film">
+                            <img src="images/items/film.jpg" class="card-img-top" alt="Vintage Film">
                             <div class="time-left">
                                 <i class="fas fa-clock me-1"></i>
                                 <span class="countdown" data-time="2023-12-26T09:15:00">2d 1h 30m</span>
@@ -411,7 +405,7 @@
                 <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="card h-100">
                         <div class="card-img-container">
-                            <img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Camera Bag">
+                            <img src="images/items/camera-bag.jpg" class="card-img-top" alt="Camera Bag">
                             <div class="time-left">
                                 <i class="fas fa-clock me-1"></i>
                                 <span class="countdown" data-time="2023-12-28T14:00:00">4d 6h 15m</span>
@@ -562,6 +556,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+                </div>
+                <div class="  2023 AuctionHub. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <ul class="list-inline">
