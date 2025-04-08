@@ -35,6 +35,11 @@
                             <i class="fas fa-home me-1"></i> Home
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">
+                            <i class="fas fa-info-circle me-1"></i> About
+                        </a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-th-large me-1"></i> Categories
@@ -43,9 +48,7 @@
                             <li><a class="dropdown-item" href="books.html"><i class="fas fa-book me-2"></i>Books</a></li>
                             <li><a class="dropdown-item" href="furniture.html"><i class="fas fa-couch me-2"></i>Furniture</a></li>
                             <li><a class="dropdown-item" href="electronics.html"><i class="fas fa-laptop me-2"></i>Electronics</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush me-2"></i>Art</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-gem me-2"></i>Jewelry & Watches</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-coins me-2"></i>Collectibles</a></li>
+                         
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -113,6 +116,123 @@
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Live Auctions Section (NEW) -->
+    <section class="live-auctions py-5">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title m-0" data-aos="fade-up">Live Auctions Now</h2>
+                <div class="live-indicator" data-aos="fade-up">
+                    <span class="pulse-dot"></span> Live Now
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Live Auction 1 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card live-auction-card">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1551913902-c92207136625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Antique Clock">
+                            <div class="live-badge">
+                                <i class="fas fa-circle-play me-1"></i> LIVE
+                            </div>
+                            <div class="live-viewers">
+                                <i class="fas fa-eye me-1"></i> 42 watching
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Antique French Carriage Clock</h5>
+                            <p class="card-text">Rare 19th century brass carriage clock with original case.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="bid-info">
+                                    <span class="current-bid" data-amount="3200">$3,200</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <div class="time-info">
+                                    <span class="live-auction-timer" data-seconds="245">4:05</span>
+                                    <small class="text-muted">Time Left</small>
+                                </div>
+                            </div>
+                            <div class="live-bid-actions">
+                                <button class="btn btn-outline-primary live-bid-btn">Place Bid</button>
+                                <a href="#" class="btn btn-primary">Watch Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Live Auction 2 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card live-auction-card">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1584380931214-dbb5b72e7fd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Vintage Camera">
+                            <div class="live-badge">
+                                <i class="fas fa-circle-play me-1"></i> LIVE
+                            </div>
+                            <div class="live-viewers">
+                                <i class="fas fa-eye me-1"></i> 78 watching
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hasselblad 500C/M Camera</h5>
+                            <p class="card-text">Iconic medium format camera with Carl Zeiss lens, excellent condition.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="bid-info">
+                                    <span class="current-bid" data-amount="4500">$4,500</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <div class="time-info">
+                                    <span class="live-auction-timer" data-seconds="180">3:00</span>
+                                    <small class="text-muted">Time Left</small>
+                                </div>
+                            </div>
+                            <div class="live-bid-actions">
+                                <button class="btn btn-outline-primary live-bid-btn">Place Bid</button>
+                                <a href="#" class="btn btn-primary">Watch Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Live Auction 3 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card live-auction-card">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" class="card-img-top" alt="Vintage Record Player">
+                            <div class="live-badge">
+                                <i class="fas fa-circle-play me-1"></i> LIVE
+                            </div>
+                            <div class="live-viewers">
+                                <i class="fas fa-eye me-1"></i> 56 watching
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Marantz Model 2275 Receiver</h5>
+                            <p class="card-text">Vintage stereo receiver, fully restored and in working condition.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="bid-info">
+                                    <span class="current-bid" data-amount="1800">$1,800</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <div class="time-info">
+                                    <span class="live-auction-timer" data-seconds="320">5:20</span>
+                                    <small class="text-muted">Time Left</small>
+                                </div>
+                            </div>
+                            <div class="live-bid-actions">
+                                <button class="btn btn-outline-primary live-bid-btn">Place Bid</button>
+                                <a href="#" class="btn btn-primary">Watch Live</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-3" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary btn-lg">View All Live Auctions</a>
+            </div>
         </div>
     </section>
 
@@ -455,6 +575,334 @@
         </div>
     </section>
 
+    <!-- Ending Soon Auctions (NEW) -->
+    <section class="ending-soon py-5">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title m-0" data-aos="fade-up">Ending Soon</h2>
+                <a href="#" class="btn btn-outline-primary" data-aos="fade-up">View All</a>
+            </div>
+            
+            <div class="swiper endingSoonSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Ending Soon Item 1 -->
+                    <div class="swiper-slide">
+                        <div class="card ending-soon-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Vintage Sunglasses">
+                                <div class="time-left urgent">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T18:30:00">4h 15m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>19 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1960s Ray-Ban Wayfarer</h5>
+                                <p class="card-text">Original vintage Ray-Ban Wayfarer sunglasses with case.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$450</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ending Soon Item 2 -->
+                    <div class="swiper-slide">
+                        <div class="card ending-soon-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1611234408198-39d7e521e55b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Vintage Typewriter">
+                                <div class="time-left urgent">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T19:45:00">5h 30m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>12 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1950s Olivetti Typewriter</h5>
+                                <p class="card-text">Vintage Olivetti Lettera 22 typewriter in working condition.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$320</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ending Soon Item 3 -->
+                    <div class="swiper-slide">
+                        <div class="card ending-soon-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1551913902-c92207136625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Antique Clock">
+                                <div class="time-left urgent">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T20:15:00">6h 0m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>24 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Antique Mantel Clock</h5>
+                                <p class="card-text">19th century French mantel clock with bronze case.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$1,200</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ending Soon Item 4 -->
+                    <div class="swiper-slide">
+                        <div class="card ending-soon-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1595909315417-2edd382a56dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Vintage Radio">
+                                <div class="time-left urgent">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T21:00:00">6h 45m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>8 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1940s Zenith Radio</h5>
+                                <p class="card-text">Vintage Zenith tube radio, restored and in working condition.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$380</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Auctions (NEW) -->
+    <section class="premium-auctions py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title text-white" data-aos="fade-up">Premium Auctions</h2>
+            <p class="section-subtitle text-center mb-5" data-aos="fade-up">Exceptional items with verified authenticity and provenance</p>
+            
+            <div class="swiper premiumAuctionsSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Premium Auction 1 -->
+                    <div class="swiper-slide">
+                        <div class="card premium-auction-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1568213816046-0a1dfe780ebe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" class="card-img-top" alt="Luxury Watch">
+                                <div class="premium-badge">
+                                    <i class="fas fa-gem me-1"></i> PREMIUM
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Patek Philippe Nautilus</h5>
+                                <p class="card-text">Rare Patek Philippe Nautilus Ref. 5711 with box and papers.</p>
+                                <div class="item-details mb-3">
+                                    <div class="detail-item">
+                                        <i class="fas fa-certificate me-1"></i>
+                                        <span>Authenticity Verified</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-history me-1"></i>
+                                        <span>Full Provenance</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$85,000</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Auction 2 -->
+                    <div class="swiper-slide">
+                        <div class="card premium-auction-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1579762593175-20226054cad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" class="card-img-top" alt="Fine Art">
+                                <div class="premium-badge">
+                                    <i class="fas fa-gem me-1"></i> PREMIUM
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Original Picasso Lithograph</h5>
+                                <p class="card-text">Hand-signed Pablo Picasso lithograph from the Vollard Suite.</p>
+                                <div class="item-details mb-3">
+                                    <div class="detail-item">
+                                        <i class="fas fa-certificate me-1"></i>
+                                        <span>Authenticity Verified</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-history me-1"></i>
+                                        <span>Full Provenance</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$32,500</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Auction 3 -->
+                    <div class="swiper-slide">
+                        <div class="card premium-auction-card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1597343722400-76e6b1d4e58d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Rare Book">
+                                <div class="premium-badge">
+                                    <i class="fas fa-gem me-1"></i> PREMIUM
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">First Edition Ulysses</h5>
+                                <p class="card-text">First edition of James Joyce's Ulysses, one of 100 signed copies.</p>
+                                <div class="item-details mb-3">
+                                    <div class="detail-item">
+                                        <i class="fas fa-certificate me-1"></i>
+                                        <span>Authenticity Verified</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-history me-1"></i>
+                                        <span>Full Provenance</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$140,000</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            
+            <div class="text-center mt-4" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-light btn-lg">View All Premium Auctions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auction Categories (NEW) -->
+    <section class="auction-categories py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Auction Categories</h2>
+            <p class="section-subtitle text-center mb-5" data-aos="fade-up">Explore our specialized auction categories</p>
+            
+            <div class="swiper auctionCategoriesSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Category 1 -->
+                    <div class="swiper-slide">
+                        <div class="auction-category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3>Jewelry & Watches</h3>
+                            <p>Luxury timepieces, fine jewelry, and precious gems</p>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">1,245</span>
+                                    <span class="stat-label">Active Auctions</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">$2.4M</span>
+                                    <span class="stat-label">Monthly Volume</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Browse Category</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Category 2 -->
+                    <div class="swiper-slide">
+                        <div class="auction-category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Fine Art</h3>
+                            <p>Paintings, sculptures, prints, and contemporary art</p>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">875</span>
+                                    <span class="stat-label">Active Auctions</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">$3.8M</span>
+                                    <span class="stat-label">Monthly Volume</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Browse Category</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Category 3 -->
+                    <div class="swiper-slide">
+                        <div class="auction-category-card">
+                            <div class="category-icon">
+                                <i class="fas fa-wine-glass-alt"></i>
+                            </div>
+                            <h3>Wine & Spirits</h3>
+                            <p>Fine wines, rare whiskies, and vintage spirits</p>
+                            <div class="category-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">620</span>
+                                    <span class="stat-label">Active Auctions</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">$1.2M</span>
+                                    <span class="stat-label">Monthly Volume</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Browse Category</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Categories Section -->
     <section class="categories-section py-5">
         <div class="container">
@@ -462,9 +910,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="category-card">
-                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cropI'll continue from the cut-off point:
-
-bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2090&q=80" alt="Books" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2090&q=80" alt="Books" class="img-fluid rounded">
                         <div class="category-overlay">
                             <h3>Books</h3>
                             <p>Rare editions, signed copies, and more</p>
@@ -783,7 +1229,405 @@ bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
 
+    // Hero Slider
+    const heroSwiper = new Swiper('.heroSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: '.heroSwiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.heroSwiper .swiper-button-next',
+            prevEl: '.heroSwiper .swiper-button-prev',
+        },
+    });
+
+    // Hot Auctions Slider
+    const hotAuctionsSwiper = new Swiper('.hotAuctionsSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.hotAuctionsSwiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.hotAuctionsSwiper .swiper-button-next',
+            prevEl: '.hotAuctionsSwiper .swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    // Testimonials Slider
+    const testimonialSwiper = new Swiper('.testimonialSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.testimonialSwiper .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    // New Auction Slider
+    const auctionCategoriesSwiper = new Swiper('.auctionCategoriesSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.auctionCategoriesSwiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.auctionCategoriesSwiper .swiper-button-next',
+            prevEl: '.auctionCategoriesSwiper .swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    // Ending Soon Slider
+    const endingSoonSwiper = new Swiper('.endingSoonSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.endingSoonSwiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.endingSoonSwiper .swiper-button-next',
+            prevEl: '.endingSoonSwiper .swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    // Premium Auctions Slider
+    const premiumAuctionsSwiper = new Swiper('.premiumAuctionsSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.premiumAuctionsSwiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.premiumAuctionsSwiper .swiper-button-next',
+            prevEl: '.premiumAuctionsSwiper .swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    // Countdown functionality
+    const countdownElements = document.querySelectorAll('.countdown');
+    
+    function updateCountdowns() {
+        const now = new Date().getTime();
+        
+        countdownElements.forEach(element => {
+            const endTime = new Date(element.getAttribute('data-time')).getTime();
+            const timeLeft = endTime - now;
+            
+            if (timeLeft <= 0) {
+                element.innerHTML = 'Auction Ended';
+                element.classList.add('ended');
+            } else {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                
+                let countdownText = '';
+                if (days > 0) {
+                    countdownText += `${days}d `;
+                }
+                countdownText += `${hours}h ${minutes}m`;
+                
+                element.innerHTML = countdownText;
+                
+                // Add urgent class if less than 12 hours left
+                if (timeLeft < (1000 * 60 * 60 * 12)) {
+                    element.classList.add('urgent');
+                }
+            }
+        });
+    }
+    
+    // Initial update
+    updateCountdowns();
+    
+    // Update every minute
+    setInterval(updateCountdowns, 60000);
+
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Live auction time updates
+    function updateLiveAuctionTimes() {
+        const liveAuctionTimers = document.querySelectorAll('.live-auction-timer');
+        
+        liveAuctionTimers.forEach(timer => {
+            const currentSeconds = parseInt(timer.getAttribute('data-seconds')) || 0;
+            const newSeconds = currentSeconds - 1;
+            
+            if (newSeconds <= 0) {
+                timer.innerHTML = 'Just ended';
+                timer.classList.add('ended');
+            } else {
+                const minutes = Math.floor(newSeconds / 60);
+                const seconds = newSeconds % 60;
+                timer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timer.setAttribute('data-seconds', newSeconds);
+                
+                // Add urgent class if less than 30 seconds
+                if (newSeconds < 30) {
+                    timer.classList.add('urgent');
+                }
+            }
+        });
+    }
+    
+    // Update live auction timers every second
+    setInterval(updateLiveAuctionTimes, 1000);
+
+    // Bid animation for live auctions
+    const liveBidButtons = document.querySelectorAll('.live-bid-btn');
+    
+    liveBidButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get the current bid amount element
+            const bidAmountElement = this.closest('.live-auction-card').querySelector('.current-bid');
+            const currentBid = parseFloat(bidAmountElement.getAttribute('data-amount'));
+            
+            // Calculate new bid (current + 10%)
+            const newBid = currentBid * 1.1;
+            
+            // Update the display
+            bidAmountElement.setAttribute('data-amount', newBid.toFixed(2));
+            bidAmountElement.textContent = '$' + newBid.toLocaleString('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            
+            // Add animation class
+            bidAmountElement.classList.add('bid-updated');
+            
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                bidAmountElement.classList.remove('bid-updated');
+            }, 1000);
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'bid-success-message';
+            successMessage.textContent = 'Bid placed successfully!';
+            this.closest('.live-auction-card').appendChild(successMessage);
+            
+            // Remove success message after 2 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 2000);
+        });
+    });
+
+    // Search functionality
+    const searchForm = document.querySelector('.search-form');
+    const searchInput = document.getElementById('globalSearch');
+    const searchResults = document.getElementById('searchResults');
+    const searchResultsContainer = document.getElementById('searchResultsContainer');
+    const itemCards = document.querySelectorAll('.item-card');
+    
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        if (searchTerm.length < 2) {
+            searchResults.classList.add('d-none');
+            return;
+        }
+        
+        // Clear previous results
+        searchResultsContainer.innerHTML = '';
+        
+        // Filter items
+        let resultsFound = false;
+        
+        itemCards.forEach(card => {
+            const itemName = card.getAttribute('data-name').toLowerCase();
+            const itemCategory = card.getAttribute('data-category').toLowerCase();
+            
+            if (itemName.includes(searchTerm) || itemCategory.includes(searchTerm)) {
+                resultsFound = true;
+                
+                // Clone the card and add to results
+                const clone = card.cloneNode(true);
+                clone.classList.remove('mb-4');
+                clone.classList.add('col-md-4', 'mb-3');
+                searchResultsContainer.appendChild(clone);
+            }
+        });
+        
+        if (resultsFound) {
+            searchResults.classList.remove('d-none');
+        } else {
+            searchResultsContainer.innerHTML = '<div class="col-12"><p>No results found for "' + searchTerm + '"</p></div>';
+            searchResults.classList.remove('d-none');
+        }
+    });
+
+    // Newsletter subscription
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            
+            if (email) {
+                // Here you would typically send the email to your server
+                // For demo purposes, we'll just show a success message
+                
+                // Create success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'alert alert-success mt-3';
+                successMessage.innerHTML = 'Thank you for subscribing! You\'ll receive our next newsletter soon.';
+                
+                // Add message after the form
+                this.after(successMessage);
+                
+                // Reset form
+                this.reset();
+                
+                // Remove message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            }
+        });
+    }
+});
+    </script>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
@@ -793,5 +1637,7 @@ bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%
     <!-- Custom JS -->
     <script src="js/global.js"></script>
     <script src="js/index.js"></script>
+
+    
 </body>
 </html>
