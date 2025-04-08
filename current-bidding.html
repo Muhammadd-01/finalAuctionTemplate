@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>AuctionHub - Current Bidding</title>
+   <!-- Bootstrap CSS -->
+   <link
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+     rel="stylesheet"
+   />
+   <!-- Font Awesome -->
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+   />
+   <!-- Google Fonts -->
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+   <!-- Swiper CSS -->
+   <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+   />
+   <!-- AOS Animation CSS -->
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+   />
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/global.css" />
+   <link rel="stylesheet" href="css/current-bidding.css" />
+ </head>
+ <body>
+   <!-- Enhanced Professional Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+       <div class="container">
+           <a class="navbar-brand" href="index.html">
+               <i class="fas fa-gavel me-2"></i>AuctionHub
+           </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav me-auto">
+                   <li class="nav-item">
+                       <a class="nav-link active" href="index.html">
+                           <i class="fas fa-home me-1"></i> Home
+                       </a>
+                   </li>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                           <i class="fas fa-th-large me-1"></i> Categories
+                       </a>
+                       <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="books.html"><i class="fas fa-book me-2"></i>Books</a></li>
+                           <li><a class="dropdown-item" href="furniture.html"><i class="fas fa-couch me-2"></i>Furniture</a></li>
+                           <li><a class="dropdown-item" href="electronics.html"><i class="fas fa-laptop me-2"></i>Electronics</a></li>
+                           <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush me-2"></i>Art</a></li>
+                           <li><a class="dropdown-item" href="#"><i class="fas fa-gem me-2"></i>Jewelry & Watches</a></li>
+                           <li><a class="dropdown-item" href="#"><i class="fas fa-coins me-2"></i>Collectibles</a></li>
+                       </ul>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="current-bidding.html">
+                           <i class="fas fa-gavel me-1"></i> Current Bidding
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="sell.html">
+                           <i class="fas fa-tag me-1"></i> Sell an Item
+                       </a>
+                   </li>
+               </ul>
+               <form class="d-flex me-3 search-form">
+                   <div class="input-group">
+                       <input class="form-control" type="search" id="globalSearch" placeholder="Search items...">
+                       <button class="btn" type="submit">
+                           <i class="fas fa-search"></i>
+                       </button>
+                   </div>
+               </form>
+               <div class="d-flex align-items-center nav-right">
+                   <a href="notifications.html" class="nav-icon">
+                       <i class="fas fa-bell"></i>
+                       <span class="badge rounded-pill">3</span>
+                   </a>
+                   <a href="profile.html" class="nav-icon">
+                       <i class="fas fa-user"></i>
+                   </a>
+                   <div class="nav-buttons">
+                       <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                       <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </nav>
+
+   <!-- Enhanced Current Bidding Banner -->
+   <section class="bidding-banner py-5 mb-4" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1515169067868-5387ec356754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; color: white;">
+     <div class="container">
+       <div class="row align-items-center">
+         <div class="col-lg-6" data-aos="fade-up">
+           <div class="banner-content py-5">
+             <h1 class="display-4 fw-bold">Your Current Bidding</h1>
+             <p class="lead fs-4 mb-4">Track all your active bids and won auctions in one place</p>
+             <div class="banner-stats d-flex flex-wrap">
+               <div class="stat-item me-4 mb-3">
+                 <div class="stat-number">3</div>
+                 <div class="stat-label">Active Bids</div>
+               </div>
+               <div class="stat-item me-4 mb-3">
+                 <div class="stat-number">2</div>
+                 <div class="stat-label">Outbid Items</div>
+               </div>
+               <div class="stat-item me-4 mb-3">
+                 <div class="stat-number">2</div>
+                 <div class="stat-label">Won Auctions</div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-lg-6 text-lg-end mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+           <img src="https://images.unsplash.com/photo-1651150602677-f860d35682ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Auction Gavel" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- Bidding Navigation -->
+   <section class="bidding-nav py-3 bg-light mb-4">
+     <div class="container">
+       <div class="row">
+         <div class="col-12" data-aos="fade-up">
+           <div class="nav nav-pills nav-justified" id="bidding-tabs" role="tablist">
+             <button class="nav-link active px-4 py-3" id="activeBidsBtn" data-bs-toggle="pill" data-bs-target="#activeBidsSection" type="button" role="tab">
+               <i class="fas fa-gavel me-2"></i> Active Bids
+             </button>
+             <button class="nav-link px-4 py-3" id="wonBidsBtn" data-bs-toggle="pill" data-bs-target="#wonBidsSection" type="button" role="tab">
+               <i class="fas fa-trophy me-2"></i> Won Auctions
+             </button>
+             <button class="nav-link px-4 py-3" id="lostBidsBtn" data-bs-toggle="pill" data-bs-target="#lostBidsSection" type="button" role="tab">
+               <i class="fas fa-times-circle me-2"></i> Lost Auctions
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- Tab Content -->
+   <div class="tab-content" id="bidding-tab-content">
+     <!-- Active Bids Section -->
+     <section class="active-bids tab-pane fade show active py-4" id="activeBidsSection" role="tabpanel">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 mb-4" data-aos="fade-up">
+             <div class="alert alert-info" role="alert">
+               <i class="fas fa-info-circle me-2"></i> You are currently the
+               highest bidder on 3 items and have been outbid on 2 items.
+             </div>
+           </div>
+         </div>
+
+         <!-- Highest Bidder Items -->
+         <div class="row mb-5">
+           <div class="col-12 mb-3" data-aos="fade-up">
+             <h3 class="section-subtitle">You're the Highest Bidder</h3>
+           </div>
+           
+           <!-- Card 1 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="card h-100 bid-card highest-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-success">Highest Bidder</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1606986565168-96fd7c0c95b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Vintage Leica M3 Camera">
+               <div class="card-body">
+                 <h5 class="card-title">Vintage Leica M3 Camera (1954)</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Electronics</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$1,250.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Bid Count</div>
+                       <div class="bid-value">12 bids</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="time-remaining mb-3">
+                   <i class="fas fa-clock me-1"></i>
+                   <span class="countdown" data-time="2023-12-31T23:59:59">2d 5h 30m</span>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="item.html" class="btn btn-outline-primary">View Item</a>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#increaseBidModal">
+                     Increase Bid
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 2 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="card h-100 bid-card highest-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-success">Highest Bidder</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="First Edition Hemingway">
+               <div class="card-body">
+                 <h5 class="card-title">First Edition Hemingway</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Books</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$3,500.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Bid Count</div>
+                       <div class="bid-value">8 bids</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="time-remaining mb-3">
+                   <i class="fas fa-clock me-1"></i>
+                   <span class="countdown" data-time="2023-12-25T10:00:00">1d 2h 15m</span>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="item.html" class="btn btn-outline-primary">View Item</a>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#increaseBidModal">
+                     Increase Bid
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 3 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+             <div class="card h-100 bid-card highest-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-success">Highest Bidder</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Rolex Submariner">
+               <div class="card-body">
+                 <h5 class="card-title">Rolex Submariner 1968</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Jewelry & Watches</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$8,750.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Bid Count</div>
+                       <div class="bid-value">24 bids</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="time-remaining mb-3">
+                   <i class="fas fa-clock me-1"></i>
+                   <span class="countdown highlight" data-time="2023-12-24T18:00:00">12h 45m</span>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="item.html" class="btn btn-outline-primary">View Item</a>
+                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#increaseBidModal">
+                     Increase Bid
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- Outbid Items -->
+         <div class="row mb-5">
+           <div class="col-12 mb-3" data-aos="fade-up">
+             <h3 class="section-subtitle">You've Been Outbid</h3>
+           </div>
+           
+           <!-- Card 1 -->
+           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="card h-100 bid-card outbid">
+               <div class="card-status-badge">
+                 <span class="badge bg-danger">Outbid</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="19th Century Oil Painting">
+               <div class="card-body">
+                 <h5 class="card-title">19th Century Oil Painting</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Art</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value text-danger">$5,100.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Current Bid</div>
+                       <div class="bid-value">$5,200.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="time-remaining mb-3">
+                   <i class="fas fa-clock me-1"></i>
+                   <span class="countdown urgent" data-time="2023-12-23T20:15:00">6h 30m</span>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="item.html" class="btn btn-outline-primary">View Item</a>
+                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#bidAgainModal">
+                     Bid Again
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 2 -->
+           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="card h-100 bid-card outbid">
+               <div class="card-status-badge">
+                 <span class="badge bg-danger">Outbid</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Victorian Writing Desk">
+               <div class="card-body">
+                 <h5 class="card-title">Victorian Writing Desk</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Furniture</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value text-danger">$2,700.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Current Bid</div>
+                       <div class="bid-value">$2,800.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="time-remaining mb-3">
+                   <i class="fas fa-clock me-1"></i>
+                   <span class="countdown" data-time="2023-12-28T15:30:00">3d 8h 45m</span>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="item.html" class="btn btn-outline-primary">View Item</a>
+                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#bidAgainModal">
+                     Bid Again
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <!-- Won Auctions Section -->
+     <section class="won-auctions tab-pane fade py-4" id="wonBidsSection" role="tabpanel">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 mb-4" data-aos="fade-up">
+             <div class="alert alert-success" role="alert">
+               <i class="fas fa-trophy me-2"></i> Congratulations! You've won 2
+               auctions in the past 30 days.
+             </div>
+           </div>
+         </div>
+
+         <div class="row">
+           <!-- Card 1 -->
+           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="card h-100 bid-card won-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-warning">Payment Pending</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1558461560-9d8c2354e19c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="1950s Remington Typewriter">
+               <div class="card-body">
+                 <h5 class="card-title">1950s Remington Typewriter</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Electronics</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-success">$275.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Auction Ended</div>
+                       <div class="bid-value">Dec 20, 2023</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="item-status mb-2">
+                   <div class="progress" style="height: 8px;">
+                     <div class="progress-bar bg-warning" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                   <div class="d-flex justify-content-between mt-1">
+                     <small>Won</small>
+                     <small>Paid</small>
+                     <small>Shipped</small>
+                   </div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">Contact Seller</a>
+                   <a href="#" class="btn btn-primary">Pay Now</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 2 -->
+           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="card h-100 bid-card won-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-success">Shipped</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1516550893885-985c994c8609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Chinese Porcelain Vase">
+               <div class="card-body">
+                 <h5 class="card-title">Chinese Porcelain Vase</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Antiques</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-success">$1,850.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Auction Ended</div>
+                       <div class="bid-value">Dec 15, 2023</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="item-status mb-2">
+                   <div class="progress" style="height: 8px;">
+                     <div class="progress-bar bg-success" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                   <div class="d-flex justify-content-between mt-1">
+                     <small>Won</small>
+                     <small>Paid</small>
+                     <small>Shipped</small>
+                   </div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">Track Package</a>
+                   <a href="#" class="btn btn-primary">Leave Feedback</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <!-- Lost Auctions Section -->
+     <section class="lost-auctions tab-pane fade py-4" id="lostBidsSection" role="tabpanel">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 mb-4" data-aos="fade-up">
+             <div class="alert alert-secondary" role="alert">
+               <i class="fas fa-info-circle me-2"></i> You've participated in 5
+               auctions that have ended without winning.
+             </div>
+           </div>
+         </div>
+
+         <div class="row">
+           <!-- Card 1 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="card h-100 bid-card lost-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-secondary">Lost</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1605020420620-20c943cc4669?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="1959 Gibson Les Paul">
+               <div class="card-body">
+                 <h5 class="card-title">1959 Gibson Les Paul</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Musical Instruments</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$170,000.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-danger">$175,500.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="auction-ended mb-2">
+                   <div class="bid-label">Auction Ended</div>
+                   <div class="bid-value">Dec 22, 2023</div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">View Similar</a>
+                   <a href="#" class="btn btn-outline-primary">Add to Watchlist</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 2 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="card h-100 bid-card lost-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-secondary">Lost</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="1794 Silver Dollar">
+               <div class="card-body">
+                 <h5 class="card-title">1794 Silver Dollar</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Coins & Currency</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$120,000.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-danger">$125,000.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="auction-ended mb-2">
+                   <div class="bid-label">Auction Ended</div>
+                   <div class="bid-value">Dec 21, 2023</div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">View Similar</a>
+                   <a href="#" class="btn btn-outline-primary">Add to Watchlist</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 3 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+             <div class="card h-100 bid-card lost-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-secondary">Lost</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Eames Lounge Chair">
+               <div class="card-body">
+                 <h5 class="card-title">Eames Lounge Chair</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Furniture</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$4,100.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-danger">$4,250.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="auction-ended mb-2">
+                   <div class="bid-label">Auction Ended</div>
+                   <div class="bid-value">Dec 19, 2023</div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">View Similar</a>
+                   <a href="#" class="btn btn-outline-primary">Add to Watchlist</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 4 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+             <div class="card h-100 bid-card lost-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-secondary">Lost</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Harry Potter First Edition">
+               <div class="card-body">
+                 <h5 class="card-title">Harry Potter First Edition</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Books</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$12,500.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-danger">$12,750.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="auction-ended mb-2">
+                   <div class="bid-label">Auction Ended</div>
+                   <div class="bid-value">Dec 18, 2023</div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">View Similar</a>
+                   <a href="#" class="btn btn-outline-primary">Add to Watchlist</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Card 5 -->
+           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+             <div class="card h-100 bid-card lost-bid">
+               <div class="card-status-badge">
+                 <span class="badge bg-secondary">Lost</span>
+               </div>
+               <img src="https://images.unsplash.com/photo-1593078166039-c9878df5c520?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" class="card-img-top" alt="Vintage Marantz Turntable">
+               <div class="card-body">
+                 <h5 class="card-title">Vintage Marantz Turntable</h5>
+                 <div class="card-meta mb-3">
+                   <span class="badge bg-secondary">Electronics</span>
+                 </div>
+                 <div class="bid-info mb-3">
+                   <div class="row">
+                     <div class="col-6">
+                       <div class="bid-label">Your Bid</div>
+                       <div class="bid-value">$800.00</div>
+                     </div>
+                     <div class="col-6">
+                       <div class="bid-label">Winning Bid</div>
+                       <div class="bid-value text-danger">$850.00</div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="auction-ended mb-2">
+                   <div class="bid-label">Auction Ended</div>
+                   <div class="bid-value">Dec 17, 2023</div>
+                 </div>
+               </div>
+               <div class="card-footer bg-white p-3 border-top">
+                 <div class="d-flex justify-content-between">
+                   <a href="#" class="btn btn-outline-primary">View Similar</a>
+                   <a href="#" class="btn btn-outline-primary">Add to Watchlist</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+   </div>
+
+   <!-- Increase Bid Modal -->
+   <div
+     class="modal fade"
+     id="increaseBidModal"
+     tabindex="-1"
+     aria-labelledby="increaseBidModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="increaseBidModalLabel">
+             Increase Your Bid
+           </h5>
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body">
+           <p>
+             You are currently the highest bidder, but you can increase your
+             maximum bid to improve your chances of winning.
+           </p>
+           <form id="increaseBidForm">
+             <div class="mb-3">
+               <label for="currentBidAmount" class="form-label"
+                 >Current Bid</label
+               >
+               <div class="input-group">
+                 <span class="input-group-text">$</span>
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="currentBidAmount"
+                   value="1,250.00"
+                   disabled
+                 />
+               </div>
+             </div>
+             <div class="mb-3">
+               <label for="newBidAmount" class="form-label"
+                 >New Maximum Bid</label
+               >
+               <div class="input-group">
+                 <span class="input-group-text">$</span>
+                 <input
+                   type="number"
+                   class="form-control"
+                   id="newBidAmount"
+                   min="1275"
+                   step="25"
+                   required
+                 />
+               </div>
+               <div class="form-text">
+                 Enter an amount greater than $1,275.00 (current bid + $25.00)
+               </div>
+             </div>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button
+             type="button"
+             class="btn btn-secondary"
+             data-bs-dismiss="modal"
+           >
+             Cancel
+           </button>
+           <button type="button" class="btn btn-primary">Increase Bid</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- Bid Again Modal -->
+   <div
+     class="modal fade"
+     id="bidAgainModal"
+     tabindex="-1"
+     aria-labelledby="bidAgainModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="bidAgainModalLabel">Place a New Bid</h5>
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body">
+           <div class="alert alert-warning">
+             <i class="fas fa-exclamation-triangle me-2"></i> You have been
+             outbid on this item.
+           </div>
+           <form id="bidAgainForm">
+             <div class="mb-3">
+               <label for="outbidAmount" class="form-label">Current Bid</label>
+               <div class="input-group">
+                 <span class="input-group-text">$</span>
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="outbidAmount"
+                   value="5,200.00"
+                   disabled
+                 />
+               </div>
+             </div>
+             <div class="mb-3">
+               <label for="yourLastBid" class="form-label"
+                 >Your Last Bid</label
+               >
+               <div class="input-group">
+                 <span class="input-group-text">$</span>
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="yourLastBid"
+                   value="5,100.00"
+                   disabled
+                 />
+               </div>
+             </div>
+             <div class="mb-3">
+               <label for="newOutbidAmount" class="form-label"
+                 >Your New Bid</label
+               >
+               <div class="input-group">
+                 <span class="input-group-text">$</span>
+                 <input
+                   type="number"
+                   class="form-control"
+                   id="newOutbidAmount"
+                   min="5300"
+                   step="100"
+                   required
+                 />
+               </div>
+               <div class="form-text">
+                 Enter an amount greater than $5,300.00 (current bid + $100.00)
+               </div>
+             </div>
+           </form>
+         </div>
+         <div class="modal-footer">
+           <button
+             type="button"
+             class="btn btn-secondary"
+             data-bs-dismiss="modal"
+           >
+             Cancel
+           </button>
+           <button type="button" class="btn btn-primary">Place Bid</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="footer py-4">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-4 mb-3">
+           <h5>AuctionHub</h5>
+           <p>
+             The premier online auction platform for unique and collectible
+             items.
+           </p>
+         </div>
+         <div class="col-lg-2 col-md-4 mb-3">
+           <h5>Categories</h5>
+           <ul class="list-unstyled">
+             <li><a href="books.html">Books</a></li>
+             <li><a href="furniture.html">Furniture</a></li>
+             <li><a href="electronics.html">Electronics</a></li>
+           </ul>
+         </div>
+         <div class="col-lg-2 col-md-4 mb-3">
+           <h5>Account</h5>
+           <ul class="list-unstyled">
+             <li><a href="login.html">Login</a></li>
+             <li><a href="register.html">Register</a></li>
+             <li><a href="profile.html">Profile</a></li>
+           </ul>
+         </div>
+         <div class="col-lg-4 col-md-4 mb-3">
+           <h5>Stay Connected</h5>
+           <div class="social-icons">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-pinterest"></i></a>
+           </div>
+         </div>
+       </div>
+       <hr />
+       <div class="row">
+         <div class="col-md-6">
+           <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+         </div>
+         <div class="col-md-6 text-md-end">
+           <ul class="list-inline">
+             <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+             <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+             <li class="list-inline-item"><a href="#">Contact Us</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </footer>
+
+   <!-- Bootstrap JS Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- AOS Animation JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <!-- Custom JS -->
+   <script src="js/global.js"></script>
+   <script src="js/current-bidding.js"></script>
+ </body>
+</html>

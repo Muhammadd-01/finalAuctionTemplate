@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionHub - Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gavel me-2"></i>AuctionHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="books.html">Books</a></li>
+                            <li><a class="dropdown-item" href="furniture.html">Furniture</a></li>
+                            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="current-bidding.html">Current Bidding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sell.html">Sell an Item</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search items...">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill bg-danger">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <section class="profile-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center mb-4" data-aos="fade-up">
+                    <div class="profile-avatar">
+                        <img src="images/users/profile-avatar.jpg" alt="Profile Avatar" class="img-fluid rounded-circle">
+                        <button class="btn btn-sm btn-primary edit-avatar-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-up" data-aos-delay="100">
+                    <div class="profile-info">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h1 class="profile-name">John Doe</h1>
+                            <a href="#" class="btn btn-outline-primary btn-sm edit-profile-btn">
+                                <i class="fas fa-edit me-1"></i> Edit Profile
+                            </a>
+                        </div>
+                        <div class="profile-meta mb-3">
+                            <span class="badge bg-secondary me-2">Member since: Jan 2020</span>
+                            <span class="badge bg-secondary me-2">Location: New York, USA</span>
+                            <span class="badge bg-secondary">Transactions: 87</span>
+                        </div>
+                        <div class="profile-rating mb-3">
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-value">4.7</span>
+                            </div>
+                            <small class="text-muted">(42 ratings as seller, 45 ratings as buyer)</small>
+                        </div>
+                        <p class="profile-bio">Passionate collector of vintage cameras, vinyl records, and mid-century furniture. Always looking for unique items to add to my collection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Tabs -->
+    <section class="profile-tabs py-4">
+        <div class="container">
+            <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="listings-tab" data-bs-toggle="tab" data-bs-target="#listings" type="button" role="tab" aria-controls="listings" aria-selected="false">My Listings</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="bids-tab" data-bs-toggle="tab" data-bs-target="#bids" type="button" role="tab" aria-controls="bids" aria-selected="false">My Bids</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="watchlist-tab" data-bs-toggle="tab" data-bs-target="#watchlist" type="button" role="tab" aria-controls="watchlist" aria-selected="false">Watchlist</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="feedback-tab" data-bs-toggle="tab" data-bs-target="#feedback" type="button" role="tab" aria-controls="feedback" aria-selected="false">Feedback</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-  id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                </li>
+            </ul>
+            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="profileTabsContent">
+                <!-- Dashboard Tab -->
+                <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="row">
+                        <!-- Activity Summary -->
+                        <div class="col-md-8 mb-4" data-aos="fade-up">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Activity Summary</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>3</h2>
+                                                <p>Active Bids</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>5</h2>
+                                                <p>Active Listings</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>12</h2>
+                                                <p>Watchlist Items</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>$1,250</h2>
+                                                <p>Highest Active Bid</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>$8,750</h2>
+                                                <p>Total Sales</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="activity-stat">
+                                                <h2>$5,320</h2>
+                                                <p>Total Purchases</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Activity -->
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Recent Activity</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <ul class="list-group list-group-flush activity-list">
+                                        <li class="list-group-item">
+                                            <div class="activity-item">
+                                                <div class="activity-icon bg-danger">
+                                                    <i class="fas fa-gavel"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <p>You've been outbid on <a href="item.html">19th Century Oil Painting</a></p>
+                                                    <small class="text-muted">10 minutes ago</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="activity-item">
+                                                <div class="activity-icon bg-success">
+                                                    <i class="fas fa-dollar-sign"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <p>New bid on your <a href="item.html">Vintage Marantz Turntable</a></p>
+                                                    <small class="text-muted">45 minutes ago</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="activity-item">
+                                                <div class="activity-icon bg-warning">
+                                                    <i class="fas fa-clock"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <p>Auction ending soon: <a href="item.html">Rolex Submariner 1968</a></p>
+                                                    <small class="text-muted">Yesterday</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="activity-item">
+                                                <div class="activity-icon bg-success">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <p>Item listed: <a href="item.html">Vintage Leica M3 Camera</a></p>
+                                                    <small class="text-muted">2 days ago</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="activity-item">
+                                                <div class="activity-icon bg-primary">
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <p>Positive feedback received from JohnD123</p>
+                                                    <small class="text-muted">3 days ago</small>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View All Activity</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ending Soon -->
+                        <div class="col-md-6 mb-4" data-aos="fade-up">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Auctions Ending Soon</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Current Bid</th>
+                                                    <th>Time Left</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">Rolex Submariner 1968</a>
+                                                    </td>
+                                                    <td>$8,750</td>
+                                                    <td>
+                                                        <div class="countdown" data-time="2023-12-24T18:00:00">12h 45m</div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="item.html" class="btn btn-sm btn-primary">Bid</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">19th Century Oil Painting</a>
+                                                    </td>
+                                                    <td>$5,200</td>
+                                                    <td>
+                                                        <div class="countdown" data-time="2023-12-23T20:15:00">6h 30m</div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="item.html" class="btn btn-sm btn-primary">Bid</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">First Edition Hemingway</a>
+                                                    </td>
+                                                    <td>$3,500</td>
+                                                    <td>
+                                                        <div class="countdown" data-time="2023-12-25T10:00:00">1d 2h 15m</div>
+                                                    </td>
+                                                    <td>
+                                                        <a href="item.html" class="btn btn-sm btn-primary">Bid</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Sales -->
+                        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Recent Sales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Sale Price</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">1950s Remington Typewriter</a>
+                                                    </td>
+                                                    <td>$275</td>
+                                                    <td>Dec 20, 2023</td>
+                                                    <td>
+                                                        <span class="badge bg-warning">Payment Pending</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">Chinese Porcelain Vase</a>
+                                                    </td>
+                                                    <td>$1,850</td>
+                                                    <td>Dec 15, 2023</td>
+                                                    <td>
+                                                        <span class="badge bg-success">Shipped</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="item.html">Antique Brass Compass</a>
+                                                    </td>
+                                                    <td>$325</td>
+                                                    <td>Dec 10, 2023</td>
+                                                    <td>
+                                                        <span class="badge bg-success">Completed</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- My Listings Tab -->
+                <div class="tab-pane fade" id="listings" role="tabpanel" aria-labelledby="listings-tab">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4>My Listings</h4>
+                        <a href="sell.html" class="btn btn-primary">
+                            <i class="fas fa-plus me-1"></i> List New Item
+                        </a>
+                    </div>
+                    
+                    <ul class="nav nav-pills mb-3" id="listingsTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="active-listings-tab" data-bs-toggle="pill" data-bs-target="#active-listings" type="button" role="tab" aria-controls="active-listings" aria-selected="true">Active (5)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="sold-listings-tab" data-bs-toggle="pill" data-bs-target="#sold-listings" type="button" role="tab" aria-controls="sold-listings" aria-selected="false">Sold (3)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="unsold-listings-tab" data-bs-toggle="pill" data-bs-target="#unsold-listings" type="button" role="tab" aria-controls="unsold-listings" aria-selected="false">Unsold (2)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="draft-listings-tab" data-bs-toggle="pill" data-bs-target="#draft-listings" type="button" role="tab" aria-controls="draft-listings" aria-selected="false">Drafts (1)</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="listingsTabsContent">
+                        <!-- Active Listings -->
+                        <div class="tab-pane fade show active" id="active-listings" role="tabpanel" aria-labelledby="active-listings-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Current Bid</th>
+                                            <th>Bids</th>
+                                            <th>Watchers</th>
+                                            <th>End Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/camera-small.jpg" alt="Vintage Camera" class="listing-img me-2">
+                                                    <a href="item.html">Vintage Leica M3 Camera (1954)</a>
+                                                </div>
+                                            </td>
+                                            <td>$1,250</td>
+                                            <td>12</td>
+                                            <td>24</td>
+                                            <td>Dec 31, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">End Early</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/turntable-small.jpg" alt="Vintage Turntable" class="listing-img me-2">
+                                                    <a href="item.html">Vintage Marantz Turntable</a>
+                                                </div>
+                                            </td>
+                                            <td>$850</td>
+                                            <td>8</td>
+                                            <td>15</td>
+                                            <td>Dec 26, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">End Early</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More listings would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Sold Listings -->
+                        <div class="tab-pane fade" id="sold-listings" role="tabpanel" aria-labelledby="sold-listings-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Sale Price</th>
+                                            <th>Buyer</th>
+                                            <th>End Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/typewriter-small.jpg" alt="Vintage Typewriter" class="listing-img me-2">
+                                                    <a href="item.html">1950s Remington Typewriter</a>
+                                                </div>
+                                            </td>
+                                            <td>$275</td>
+                                            <td>collector42</td>
+                                            <td>Dec 20, 2023</td>
+                                            <td><span class="badge bg-warning">Payment Pending</span></td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-outline-primary">Contact Buyer</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More sold listings would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Unsold Listings -->
+                        <div class="tab-pane fade" id="unsold-listings" role="tabpanel" aria-labelledby="unsold-listings-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Starting Price</th>
+                                            <th>Bids</th>
+                                            <th>End Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/radio-small.jpg" alt="Vintage Radio" class="listing-img me-2">
+                                                    <a href="item.html">1940s Zenith Radio</a>
+                                                </div>
+                                            </td>
+                                            <td>$500</td>
+                                            <td>0</td>
+                                            <td>Dec 15, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-primary">Relist</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More unsold listings would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Draft Listings -->
+                        <div class="tab-pane fade" id="draft-listings" role="tabpanel" aria-labelledby="draft-listings-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Created</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="draft-placeholder me-2">
+                                                        <i class="fas fa-image"></i>
+                                                    </div>
+                                                    <span>Antique Pocket Watch (Draft)</span>
+                                                </div>
+                                            </td>
+                                            <td>Dec 22, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="#" class="btn btn-outline-primary">Edit</a>
+                                                    <a href="#" class="btn btn-primary">Complete Listing</a>
+                                                    <a href="#" class="btn btn-outline-danger">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- My Bids Tab -->
+                <div class="tab-pane fade" id="bids" role="tabpanel" aria-labelledby="bids-tab">
+                    <h4 class="mb-4">My Bids</h4>
+                    
+                    <ul class="nav nav-pills mb-3" id="bidsTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="active-bids-tab" data-bs-toggle="pill" data-bs-target="#active-bids" type="button" role="tab" aria-controls="active-bids" aria-selected="true">Active (5)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="won-bids-tab" data-bs-toggle="pill" data-bs-target="#won-bids" type="button" role="tab" aria-controls="won-bids" aria-selected="false">Won (2)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="lost-bids-tab" data-bs-toggle="pill" data-bs-target="#lost-bids" type="button" role="tab" aria-controls="lost-bids" aria-selected="false">Lost (5)</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="bidsTabsContent">
+                        <!-- Active Bids -->
+                        <div class="tab-pane fade show active" id="active-bids" role="tabpanel" aria-labelledby="active-bids-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Your Bid</th>
+                                            <th>Current Bid</th>
+                                            <th>Status</th>
+                                            <th>End Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/watch-small.jpg" alt="Luxury Watch" class="listing-img me-2">
+                                                    <a href="item.html">Rolex Submariner 1968</a>
+                                                </div>
+                                            </td>
+                                            <td>$8,750</td>
+                                            <td>$8,750</td>
+                                            <td><span class="badge bg-success">Highest Bidder</span></td>
+                                            <td>Dec 24, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-outline-primary">Increase Bid</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/painting-small.jpg" alt="Oil Painting" class="listing-img me-2">
+                                                    <a href="item.html">19th Century Oil Painting</a>
+                                                </div>
+                                            </td>
+                                            <td>$5,100</td>
+                                            <td>$5,200</td>
+                                            <td><span class="badge bg-danger">Outbid</span></td>
+                                            <td>Dec 23, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-primary">Bid Again</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More active bids would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Won Bids -->
+                        <div class="tab-pane fade" id="won-bids" role="tabpanel" aria-labelledby="won-bids-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Winning Bid</th>
+                                            <th>End Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/vase-small.jpg" alt="Antique Vase" class="listing-img me-2">
+                                                    <a href="item.html">Chinese Porcelain Vase</a>
+                                                </div>
+                                            </td>
+                                            <td>$1,850</td>
+                                            <td>Dec 15, 2023</td>
+                                            <td><span class="badge bg-success">Shipped</span></td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-outline-primary">Track Package</a>
+                                                    <a href="#" class="btn btn-outline-primary">Leave Feedback</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More won bids would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- Lost Bids -->
+                        <div class="tab-pane fade" id="lost-bids" role="tabpanel" aria-labelledby="lost-bids-tab">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Your Bid</th>
+                                            <th>Winning Bid</th>
+                                            <th>End Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="images/items/guitar-small.jpg" alt="Vintage Guitar" class="listing-img me-2">
+                                                    <a href="item.html">1959 Gibson Les Paul</a>
+                                                </div>
+                                            </td>
+                                            <td>$170,000</td>
+                                            <td>$175,500</td>
+                                            <td>Dec 22, 2023</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="item.html" class="btn btn-outline-primary">View</a>
+                                                    <a href="#" class="btn btn-outline-primary">Find Similar</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- More lost bids would go here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Watchlist Tab -->
+                <div class="tab-pane fade" id="watchlist" role="tabpanel" aria-labelledby="watchlist-tab">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4>My Watchlist</h4>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary active">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="row" id="watchlistGrid">
+                        <!-- Watchlist Item 1 -->
+                        <div class="col-md-4 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    <img src="images/items/coin.jpg" class="card-img-top" alt="Rare Coin">
+                                    <div class="time-left">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="countdown" data-time="2023-12-23T22:00:00">8h 15m</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-danger remove-watch-btn">
+                                        <i class="fas fa-heart-broken"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">1794 Silver Dollar</h5>
+                                    <p class="card-text">Extremely rare 1794 Flowing Hair Silver Dollar in VF condition.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="bid-info">
+                                            <span class="current-bid">$125,000</span>
+                                            <small class="text-muted">Current Bid</small>
+                                        </div>
+                                        <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Watchlist Item 2 -->
+                        <div class="col-md-4 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    <img src="images/items/book2.jpg" class="card-img-top" alt="Harry Potter First Edition">
+                                    <div class="time-left">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="countdown" data-time="2023-12-27T15:30:00">3d 7h 45m</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-danger remove-watch-btn">
+                                        <i class="fas fa-heart-broken"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Harry Potter First Edition</h5>
+                                    <p class="card-text">First edition of "Harry Potter and the Philosopher's Stone" with rare printing error.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="bid-info">
+                                            <span class="current-bid">$12,750</span>
+                                            <small class="text-muted">Current Bid</small>
+                                        </div>
+                                        <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- More watchlist items would go here -->
+                    </div>
+                </div>
+                
+                <!-- Feedback Tab -->
+                <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
+                    <h4 class="mb-4">Feedback</h4>
+                    
+                    <ul class="nav nav-pills mb-3" id="feedbackTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="feedback-received-tab" data-bs-toggle="pill" data-bs-target="#feedback-received" type="button" role="tab" aria-controls="feedback-received" aria-selected="true">Received (42)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="feedback-left-tab" data-bs-toggle="pill" data-bs-target="#feedback-left" type="button" role="tab" aria-controls="feedback-left" aria-selected="false">Left (38)</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="feedbackTabsContent">
+                        <!-- Feedback Received -->
+                        <div class="tab-pane fade show active" id="feedback-received" role="tabpanel" aria-labelledby="feedback-received-tab">
+                            <div class="feedback-summary mb-4">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Overall Rating</h5>
+                                                <div class="rating-stars large">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                                <h2 class="rating-value">4.7</h2>
+                                                <p class="text-muted">From 42 ratings</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-3">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Rating Breakdown</h5>
+                                                <div class="rating-breakdown">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <div class="rating-label">5 Stars</div>
+                                                        <div class="progress flex-grow-1 mx-2">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <div class="rating-count">32</div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <div class="rating-label">4 Stars</div>
+                                                        <div class="progress flex-grow-1 mx-2">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <div class="rating-count">6</div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <div class="rating-label">3 Stars</div>
+                                                        <div class="progress flex-grow-1 mx-2">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <div class="rating-count">3</div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <div class="rating-label">2 Stars</div>
+                                                        <div class="progress flex-grow-1 mx-2">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <div class="rating-count">1</div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="rating-label">1 Star</div>
+                                                        <div class="progress flex-grow-1 mx-2">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <div class="rating-count">0</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="feedback-list">
+                                <!-- Feedback Item 1 -->
+                                <div class="feedback-item">
+                                    <div class="feedback-header">
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating-stars me-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="feedback-user">
+                                                From: <strong>JohnD123</strong>
+                                            </div>
+                                        </div>
+                                        <div class="feedback-date">Dec 18, 2023</div>
+                                    </div>
+                                    <div class="feedback-content">
+                                        <p>Great seller, fast shipping, item as described! The vintage typewriter was perfectly packaged and arrived in excellent condition. Would definitely buy from again.</p>
+                                    </div>
+                                    <div class="feedback-meta">
+                                        <small class="text-muted">For: 1950s Remington Typewriter</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Feedback Item 2 -->
+                                <div class="feedback-item">
+                                    <div class="feedback-header">
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating-stars me-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="feedback-user">
+                                                From: <strong>VintageCollector42</strong>
+                                            </div>
+                                        </div>
+                                        <div class="feedback-date">Dec 10, 2023</div>
+                                    </div>
+                                    <div class="feedback-content">
+                                        <p>Excellent transaction from start to finish. The antique brass compass was even better than the photos showed. Seller was very communicative and shipping was prompt.</p>
+                                    </div>
+                                    <div class="feedback-meta">
+                                        <small class="text-muted">For: Antique Brass Compass</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- More feedback items would go here -->
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav aria-label="Feedback pagination" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                        <!-- Feedback Left -->
+                        <div class="tab-pane fade" id="feedback-left" role="tabpanel" aria-labelledby="feedback-left-tab">
+                            <div class="feedback-list">
+                                <!-- Feedback Left Item 1 -->
+                                <div class="feedback-item">
+                                    <div class="feedback-header">
+                                        <div class="d-flex align-items-center">
+                                            <div class="rating-stars me-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="feedback-user">
+                                                To: <strong>AntiqueSeller55</strong>
+                                            </div>
+                                        </div>
+                                        <div class="feedback-date">Dec 15, 2023</div>
+                                    </div>
+                                    <div class="feedback-content">
+                                        <p>Perfect transaction! The Chinese porcelain vase was exactly as described and carefully packaged. Seller was responsive and shipping was fast.</p>
+                                    </div>
+                                    <div class="feedback-meta">
+                                        <small class="text-muted">For: Chinese Porcelain Vase</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- More feedback left items would go here -->
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav aria-label="Feedback pagination" class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Settings Tab -->
+                <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <h4 class="mb-4">Account Settings</h4>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Personal Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="personalInfoForm">
+                                        <div class="mb-3">
+                                            <label for="fullName" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="fullName" value="John Doe">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label">Username</label>
+                                            <input type="text" class="form-control" id="username" value="johndoe123" disabled>
+                                            <div class="form-text">Username cannot be changed.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" value="(555) 123-4567">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="location" class="form-label">Location</label>
+                                            <input type="text" class="form-control" id="location" value="New York, USA">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="bio" class="form-label">Bio</label>
+                                            <textarea class="form-control" id="bio" rows="3">Passionate collector of vintage cameras, vinyl records, and mid-century furniture. Always looking for unique items to add to my collection.</textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Change Password</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="passwordForm">
+                                        <div class="mb-3">
+                                            <label for="currentPassword" class="form-label">Current Password</label>
+                                            <input type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="newPassword" class="form-label">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                            <input type="password" class="form-control" id="confirmPassword">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Update Password</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Payment Methods</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="payment-methods">
+                                        <div class="payment-method d-flex justify-content-between align-items-center mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fab fa-cc-visa fa-2x me-2"></i>
+                                                <div>
+                                                    <div>Visa ending in 4242</div>
+                                                    <small class="text-muted">Expires 05/2025</small>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Remove</button>
+                                            </div>
+                                        </div>
+                                        <div class="payment-method d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fab fa-cc-paypal fa-2x me-2"></i>
+                                                <div>
+                                                    <div>PayPal</div>
+                                                    <small class="text-muted">john.doe@example.com</small>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+                                                <button class="btn btn-sm btn-outline-danger">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-primary mt-3">
+                                        <i class="fas fa-plus me-1"></i> Add Payment Method
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <h5>AuctionHub</h5>
+                    <p>The premier online auction platform for unique and collectible items.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="furniture.html">Furniture</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <h5>Stay Connected</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/global.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

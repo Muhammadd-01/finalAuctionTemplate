@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionHub - Premium Online Auctions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Enhanced Professional Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gavel me-2"></i>AuctionHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-th-large me-1"></i> Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="books.html"><i class="fas fa-book me-2"></i>Books</a></li>
+                            <li><a class="dropdown-item" href="furniture.html"><i class="fas fa-couch me-2"></i>Furniture</a></li>
+                            <li><a class="dropdown-item" href="electronics.html"><i class="fas fa-laptop me-2"></i>Electronics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush me-2"></i>Art</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-gem me-2"></i>Jewelry & Watches</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-coins me-2"></i>Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="current-bidding.html">
+                            <i class="fas fa-gavel me-1"></i> Current Bidding
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sell.html">
+                            <i class="fas fa-tag me-1"></i> Sell an Item
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3 search-form">
+                    <div class="input-group">
+                        <input class="form-control" type="search" id="globalSearch" placeholder="Search items...">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center nav-right">
+                    <a href="notifications.html" class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill">3</span>
+                    </a>
+                    <a href="profile.html" class="nav-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="slide-content">
+                        <h1 class="display-4 fw-bold">Discover Unique Treasures</h1>
+                        <p class="lead">Bid on exclusive items you won't find anywhere else</p>
+                        <a href="register.html" class="btn btn-primary btn-lg">Start Bidding</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1607435097405-db48f377bff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');">
+                    <div class="slide-content">
+                        <h1 class="display-4 fw-bold">Sell Your Collectibles</h1>
+                        <p class="lead">Turn your treasures into cash with our global marketplace</p>
+                        <a href="sell.html" class="btn btn-primary btn-lg">Start Selling</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1607434472257-d9f8e57a643d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80');">
+                    <div class="slide-content">
+                        <h1 class="display-4 fw-bold">Live Auctions Daily</h1>
+                        <p class="lead">Join thousands of collectors in real-time bidding events</p>
+                        <a href="current-bidding.html" class="btn btn-primary btn-lg">View Live Auctions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <div class="container mt-4 d-none" id="searchResults">
+        <h2>Search Results</h2>
+        <div class="row" id="searchResultsContainer">
+            <!-- Search results will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Featured Items -->
+    <section id="featured" class="py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Items</h2>
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-category="electronics" data-name="vintage camera" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" class="card-img-top" alt="Vintage Camera">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-31T23:59:59">2d 5h 30m</span>
+                            </div>
+                            <span class="featured-badge">Featured</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vintage Leica Camera</h5>
+                            <p class="card-text">A rare 1954 Leica M3 camera in excellent condition with original leather case.</p>
+                            <div class="item-rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(24)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$1,250</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-category="books" data-name="first edition novel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="First Edition Novel">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-25T10:00:00">1d 2h 15m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">First Edition Hemingway</h5>
+                            <p class="card-text">A first edition of "The Old Man and the Sea" signed by Ernest Hemingway.</p>
+                            <div class="item-rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(18)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$3,500</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-category="furniture" data-name="antique desk" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1611486212557-88be5ff6f941?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Antique Desk">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-28T15:30:00">3d 8h 45m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Victorian Writing Desk</h5>
+                            <p class="card-text">Beautiful Victorian oak writing desk from 1875 with original brass hardware.</p>
+                            <div class="item-rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(12)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$2,800</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-category="jewelry" data-name="luxury watch" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80" class="card-img-top" alt="Luxury Watch">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-24T18:00:00">12h 45m</span>
+                            </div>
+                            <span class="featured-badge">Featured</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rolex Submariner 1968</h5>
+                            <p class="card-text">Vintage Rolex Submariner with original box and papers, excellent condition.</p>
+                            <div class="item-rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(32)</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$8,750</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Auctions Slider -->
+    <section class="hot-auctions py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Hot Auctions</h2>
+            <div class="swiper hotAuctionsSwiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <!-- Hot Auction 1 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80" class="card-img-top" alt="Luxury Watch">
+                                <div class="time-left">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-24T18:00:00">12h 45m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>24 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Rolex Submariner 1968</h5>
+                                <p class="card-text">Vintage Rolex Submariner with original box and papers.</p>
+                                <div class="item-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(32)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$8,750</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hot Auction 2 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1579783483458-83d02161294e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1997&q=80" class="card-img-top" alt="Oil Painting">
+                                <div class="time-left">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T20:15:00">6h 30m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>18 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">19th Century Oil Painting</h5>
+                                <p class="card-text">Landscape oil painting by renowned artist Thomas Cole.</p>
+                                <div class="item-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(15)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$5,200</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hot Auction 3 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Rare Coin">
+                                <div class="time-left">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-23T22:00:00">8h 15m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>32 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1794 Silver Dollar</h5>
+                                <p class="card-text">Extremely rare 1794 Flowing Hair Silver Dollar in VF condition.</p>
+                                <div class="item-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(28)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$125,000</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hot Auction 4 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Vintage Guitar">
+                                <div class="time-left">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-24T09:30:00">19h 45m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>15 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">1959 Gibson Les Paul</h5>
+                                <p class="card-text">Rare 1959 Gibson Les Paul Standard with sunburst finish.</p>
+                                <div class="item-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(21)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$175,500</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hot Auction 5 -->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Antique Vase">
+                                <div class="time-left">
+                                    <i class="fas fa-clock me-1"></i>
+                                    <span class="countdown" data-time="2023-12-24T14:00:00">1d 0h 15m</span>
+                                </div>
+                                <div class="bid-count">
+                                    <i class="fas fa-gavel me-1"></i>
+                                    <span>9 bids</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ming Dynasty Vase</h5>
+                                <p class="card-text">Authentic Ming Dynasty blue and white porcelain vase, 15th century.</p>
+                                <div class="item-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(11)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="bid-info">
+                                        <span class="current-bid">$45,000</span>
+                                        <small class="text-muted">Current Bid</small>
+                                    </div>
+                                    <a href="item.html" class="btn btn-primary">Bid Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Browse by Category</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cropI'll continue from the cut-off point:
+
+bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2090&q=80" alt="Books" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Books</h3>
+                            <p>Rare editions, signed copies, and more</p>
+                            <a href="books.html" class="btn btn-light">Browse Books</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80" alt="Furniture" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Furniture</h3>
+                            <p>Antique and modern furniture pieces</p>
+                            <a href="furniture.html" class="btn btn-light">Browse Furniture</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2124&q=80" alt="Electronics" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Electronics</h3>
+                            <p>Vintage and collectible electronics</p>
+                            <a href="electronics.html" class="btn btn-light">Browse Electronics</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2145&q=80" alt="Art" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Art</h3>
+                            <p>Paintings, sculptures, and fine art</p>
+                            <a href="#" class="btn btn-light">Browse Art</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Jewelry" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Jewelry & Watches</h3>
+                            <p>Luxury timepieces and fine jewelry</p>
+                            <a href="#" class="btn btn-light">Browse Jewelry</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1472421855383-eb5861c53cb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Collectibles" class="img-fluid rounded">
+                        <div class="category-overlay">
+                            <h3>Collectibles</h3>
+                            <p>Coins, stamps, and memorabilia</p>
+                            <a href="#" class="btn btn-light">Browse Collectibles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections Section (New) -->
+    <section class="featured-collections py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Collections</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1568219656418-15c329312bf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Vintage Watches" class="img-fluid">
+                        <div class="collection-overlay">
+                            <h3>Luxury Timepieces</h3>
+                            <p>Rare and collectible watches from prestigious brands</p>
+                            <a href="#" class="btn btn-light">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="collection-card">
+                        <img src="https://images.unsplash.com/photo-1551373884-8a0750074df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Rare Coins" class="img-fluid">
+                        <div class="collection-overlay">
+                            <h3>Numismatic Treasures</h3>
+                            <p>Historic coins and currency from around the world</p>
+                            <a href="#" class="btn btn-light">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (New) -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number">25K+</div>
+                        <div class="stat-title">Active Auctions</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-title">Registered Users</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number">$150M+</div>
+                        <div class="stat-title">Items Sold</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-title">Satisfied Customers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section (New) -->
+    <section class="how-it-works py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">How It Works</h2>
+            <div class="row mt-5">
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card h-100">
+                        <div class="step-number">1</div>
+                        <h3>Register</h3>
+                        <p>Create your free account to start bidding or selling on AuctionHub.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card h-100">
+                        <div class="step-number">2</div>
+                        <h3>Browse & Bid</h3>
+                        <p>Find unique items and place bids on your favorite auctions.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card h-100">
+                        <div class="step-number">3</div>
+                        <h3>Win & Pay</h3>
+                        <p>When you win an auction, complete your purchase securely.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card h-100">
+                        <div class="step-number">4</div>
+                        <h3>Receive</h3>
+                        <p>Get your items delivered to your doorstep and leave feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Users Say</h2>
+            <div class="swiper testimonialSwiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>I've been collecting vintage cameras for years, and AuctionHub has helped me find pieces I never thought I'd own. The bidding process is transparent and secure.</p>
+                                <div class="testimonial-user">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                                    <div>
+                                        <h5>Michael Thompson</h5>
+                                        <p>Camera Collector</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>As a seller, I've had amazing success on AuctionHub. My antique furniture pieces have sold for much more than I expected, and the process was incredibly easy.</p>
+                                <div class="testimonial-user">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                                    <div>
+                                        <h5>Sarah Johnson</h5>
+                                        <p>Antique Dealer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left"></i>
+                                <p>I found a first edition of my favorite novel that I'd been searching for over a decade. The authentication process gave me confidence in my purchase.</p>
+                                <div class="testimonial-user">
+                                    <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="User">
+                                    <div>
+                                        <h5>David Wilson</h5>
+                                        <p>Book Collector</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell CTA Section -->
+    <section class="sell-cta py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Have Something to Sell?</h2>
+                    <p class="lead">List your items for auction and reach thousands of potential buyers.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="sell.html" class="btn btn-primary btn-lg sell-btn">
+                        <i class="fas fa-tag me-2"></i>Sell an Item
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2>Stay Updated</h2>
+                    <p class="lead">Subscribe to our newsletter to receive updates on new auctions and special events.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <h5>AuctionHub</h5>
+                    <p>The premier online auction platform for unique and collectible items.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="furniture.html">Furniture</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                        <li><a href="#">Art</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="#">My Bids</a></li>
+                        <li><a href="#">My Listings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <h5>Stay Connected</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p class="mt-2">Subscribe to our newsletter for updates</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email">
+                        <button class="btn btn-outline-light" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

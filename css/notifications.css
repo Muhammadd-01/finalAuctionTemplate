@@ -1,0 +1,139 @@
+/* Notifications Page Specific Styles */
+
+.notifications-header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.notifications-header h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.notifications-section {
+  background-color: var(--light-color);
+}
+
+.notifications-list {
+  margin-bottom: 2rem;
+}
+
+.notification-item {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed);
+}
+
+.notification-item:hover {
+  transform: translateY(-3px);
+}
+
+.notification-item.unread {
+  border-left: 4px solid var(--primary-color);
+}
+
+.notification-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.notification-title {
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.notification-time {
+  color: var(--gray-color);
+  font-size: 0.8rem;
+}
+
+.notification-text {
+  margin-bottom: 1rem;
+}
+
+.notification-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.notification-text a:hover {
+  text-decoration: underline;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.notification-settings {
+  background-color: var(--light-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .notifications-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .notification-item {
+    padding: 1rem;
+  }
+
+  .notification-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .notification-title {
+    font-size: 1rem;
+  }
+
+  .notification-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .notification-item {
+    flex-direction: column;
+  }
+
+  .notification-icon {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .notification-header {
+    flex-direction: column;
+  }
+
+  .notification-time {
+    margin-top: 0.25rem;
+  }
+}

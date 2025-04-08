@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionHub - Electronics</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+<body>
+       <!-- Enhanced Professional Navbar -->
+       <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gavel me-2"></i>AuctionHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-th-large me-1"></i> Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="books.html"><i class="fas fa-book me-2"></i>Books</a></li>
+                            <li><a class="dropdown-item" href="furniture.html"><i class="fas fa-couch me-2"></i>Furniture</a></li>
+                            <li><a class="dropdown-item" href="electronics.html"><i class="fas fa-laptop me-2"></i>Electronics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-paint-brush me-2"></i>Art</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-gem me-2"></i>Jewelry & Watches</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-coins me-2"></i>Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="current-bidding.html">
+                            <i class="fas fa-gavel me-1"></i> Current Bidding
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sell.html">
+                            <i class="fas fa-tag me-1"></i> Sell an Item
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3 search-form">
+                    <div class="input-group">
+                        <input class="form-control" type="search" id="globalSearch" placeholder="Search items...">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center nav-right">
+                    <a href="notifications.html" class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge rounded-pill">3</span>
+                    </a>
+                    <a href="profile.html" class="nav-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="category-header" style="background-image: url('images/categories/electronics-banner.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 data-aos="fade-up">Electronics</h1>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Discover vintage, collectible, and rare electronics from around the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="sortOptions">
+                            <option value="ending-soon">Ending Soon</option>
+                            <option value="newly-listed">Newly Listed</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="bids">Most Bids</option>
+                        </select>
+                        <label for="sortOptions">Sort By</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="electronicsType">
+                            <option value="all">All Types</option>
+                            <option value="cameras">Cameras & Photography</option>
+                            <option value="audio">Audio Equipment</option>
+                            <option value="computers">Computers & Parts</option>
+                            <option value="gaming">Gaming & Consoles</option>
+                            <option value="phones">Phones & Communication</option>
+                        </select>
+                        <label for="electronicsType">Electronics Type</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="condition">
+                            <option value="all">All Conditions</option>
+                            <option value="new">New</option>
+                            <option value="like-new">Like New</option>
+                            <option value="good">Good</option>
+                            <option value="fair">Fair</option>
+                            <option value="for-parts">For Parts/Not Working</option>
+                        </select>
+                        <label for="condition">Condition</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="priceRange">
+                            <option value="all">All Prices</option>
+                            <option value="0-100">Under $100</option>
+                            <option value="100-500">$100 - $500</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="5000+">$5,000+</option>
+                        </select>
+                        <label for="priceRange">Price Range</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electronics Listings -->
+    <section class="category-listings py-5">
+        <div class="container">
+            <div class="row" id="electronicsContainer">
+                <!-- Electronics Item 1 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/camera.jpg" class="card-img-top" alt="Vintage Leica Camera">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-31T23:59:59">2d 5h 30m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vintage Leica Camera</h5>
+                            <p class="card-text">A rare 1954 Leica M3 camera in excellent condition with original leather case.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$1,250</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 2 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/turntable.jpg" class="card-img-top" alt="Vintage Turntable">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-26T14:30:00">2d 6h 45m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vintage Marantz Turntable</h5>
+                            <p class="card-text">1970s Marantz 6300 turntable in excellent working condition with original dust cover.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$850</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 3 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/console.jpg" class="card-img-top" alt="Vintage Gaming Console">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-27T18:00:00">3d 10h 15m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nintendo NES Console</h5>
+                            <p class="card-text">Original 1985 Nintendo Entertainment System in box with 5 games and 2 controllers.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$425</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 4 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/computer.jpg" class="card-img-top" alt="Vintage Computer">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-29T12:00:00">5d 4h 15m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Macintosh 128K</h5>
+                            <p class="card-text">Original 1984 Apple Macintosh 128K computer with keyboard, mouse, and software.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$3,800</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 5 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/radio.jpg" class="card-img-top" alt="Vintage Radio">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-25T09:30:00">1d 1h 45m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">1940s Zenith Radio</h5>
+                            <p class="card-text">Vintage 1940s Zenith console radio in working condition with original tubes.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$675</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 6 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/typewriter.jpg" class="card-img-top" alt="Vintage Typewriter">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-28T16:45:00">4d 9h 00m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">IBM Selectric Typewriter</h5>
+                            <p class="card-text">1970s IBM Selectric II typewriter in perfect working condition with original case.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$350</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 7 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/phone.jpg" class="card-img-top" alt="Vintage Phone">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-26T10:15:00">2d 2h 30m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Antique Rotary Telephone</h5>
+                            <p class="card-text">1930s Western Electric rotary telephone, fully restored and in working condition.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$225</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 8 -->
+                <div class="col-md-4 col-lg-3 mb-4 item-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="images/items/projector.jpg" class="card-img-top" alt="Film Projector">
+                            <div class="time-left">
+                                <i class="fas fa-clock me-1"></i>
+                                <span class="countdown" data-time="2023-12-30T20:00:00">6d 12h 15m</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bell & Howell Projector</h5>
+                            <p class="card-text">1960s Bell & Howell 16mm film projector with original case and reels.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bid-info">
+                                    <span class="current-bid">$375</span>
+                                    <small class="text-muted">Current Bid</small>
+                                </div>
+                                <a href="item.html" class="btn btn-primary">Bid Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <h5>AuctionHub</h5>
+                    <p>The premier online auction platform for unique and collectible items.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="furniture.html">Furniture</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <h5>Stay Connected</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/global.js"></script>
+    <script src="js/categories.js"></script>
+</body>
+</html>

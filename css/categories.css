@@ -1,0 +1,79 @@
+/* Categories Pages Specific Styles */
+
+.category-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 0;
+}
+
+.category-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.category-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.category-header h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.category-header p {
+  max-width: 600px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.filter-section {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-listings {
+  background-color: var(--light-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .category-header {
+    padding: 4rem 0;
+  }
+
+  .category-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .category-header {
+    padding: 3rem 0;
+  }
+
+  .category-header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .category-header {
+    padding: 2.5rem 0;
+  }
+
+  .category-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .category-header p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuctionHub - Notifications</title>
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <!-- Google Fonts -->
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+   <!-- AOS Animation CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gavel me-2"></i>AuctionHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="books.html">Books</a></li>
+                            <li><a class="dropdown-item" href="furniture.html">Furniture</a></li>
+                            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="current-bidding.html">Current Bidding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sell.html">Sell an Item</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search items...">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill bg-danger">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Notifications Banner -->
+    <section class="notifications-banner py-5 mb-4" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="banner-content py-4">
+                        <h1 class="display-4 fw-bold">Notifications</h1>
+                        <p class="lead fs-4 mb-4">Stay updated on your auctions and activity</p>
+                        <div class="notification-stats d-flex flex-wrap">
+                            <div class="stat-item me-4 mb-3">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Unread</div>
+                            </div>
+                            <div class="stat-item me-4 mb-3">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Total</div>
+                            </div>
+                            <div class="stat-item me-4 mb-3">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Bidding</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Notifications" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Navigation -->
+    <section class="notification-nav py-3 bg-light mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="nav nav-pills nav-justified" id="notification-tabs" role="tablist">
+                        <button class="nav-link active px-4 py-3" id="allNotificationsBtn" data-bs-toggle="pill" data-bs-target="#allNotificationsSection" type="button" role="tab">
+                            <i class="fas fa-bell me-2"></i> All
+                        </button>
+                        <button class="nav-link px-4 py-3" id="biddingNotificationsBtn" data-bs-toggle="pill" data-bs-target="#biddingNotificationsSection" type="button" role="tab">
+                            <i class="fas fa-gavel me-2"></i> Bidding
+                        </button>
+                        <button class="nav-link px-4 py-3" id="sellingNotificationsBtn" data-bs-toggle="pill" data-bs-target="#sellingNotificationsSection" type="button" role="tab">
+                            <i class="fas fa-tag me-2"></i> Selling
+                        </button>
+                        <button class="nav-link px-4 py-3" id="accountNotificationsBtn" data-bs-toggle="pill" data-bs-target="#accountNotificationsSection" type="button" role="tab">
+                            <i class="fas fa-user-circle me-2"></i> Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="notification-tab-content">
+        <!-- All Notifications Section -->
+        <section class="all-notifications tab-pane fade show active py-4" id="allNotificationsSection" role="tabpanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4" data-aos="fade-up">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3 class="section-subtitle">Recent Notifications</h3>
+                            <button class="btn btn-sm btn-outline-primary" id="markAllReadBtn">
+                                <i class="fas fa-check-double me-1"></i> Mark All as Read
+                            </button>
+                        </div>
+                        
+                        <div class="row">
+                            <!-- Unread Notifications -->
+                            <!-- Notification Card 1 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card h-100 notification-card unread" data-type="bidding">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-danger me-3">
+                                                <i class="fas fa-gavel"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">You've been outbid!</h5>
+                                                <small class="text-muted">10 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="19th Century Oil Painting" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Someone has placed a higher bid of $5,200 on <a href="item.html">19th Century Oil Painting</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="item.html" class="btn btn-primary">Bid Again</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 2 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card h-100 notification-card unread" data-type="selling">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">New bid on your item!</h5>
+                                                <small class="text-muted">45 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1593078166039-c9878df5c520?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vintage Marantz Turntable" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Someone has placed a bid of $850 on your <a href="item.html">Vintage Marantz Turntable</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="item.html" class="btn btn-primary">View Item</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 3 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="card h-100 notification-card unread" data-type="account">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-info me-3">
+                                                <i class="fas fa-user-shield"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Security alert</h5>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Security Alert" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">We noticed a login to your account from a new device. If this wasn't you, please secure your account.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="#" class="btn btn-primary">Review Activity</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Read Notifications -->
+                            <!-- Notification Card 4 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                                <div class="card h-100 notification-card" data-type="bidding">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-warning me-3">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Auction ending soon</h5>
+                                                <small class="text-muted">Yesterday</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Rolex Submariner" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">The auction for <a href="item.html">Rolex Submariner 1968</a> ends in less than 24 hours.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="item.html" class="btn btn-primary w-100">View Auction</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 5 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                                <div class="card h-100 notification-card" data-type="selling">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Item listed successfully</h5>
+                                                <small class="text-muted">2 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1606986565168-96fd7c0c95b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vintage Leica M3 Camera" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Your item <a href="item.html">Vintage Leica M3 Camera (1954)</a> has been listed successfully.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="item.html" class="btn btn-primary w-100">View Listing</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 6 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                                <div class="card h-100 notification-card" data-type="account">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-primary me-3">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Positive feedback received</h5>
+                                                <small class="text-muted">3 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="User Profile" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">You received positive feedback from buyer JohnD123: "Great seller, fast shipping, item as described!"</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="profile.html" class="btn btn-primary w-100">View Feedback</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 7 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+                                <div class="card h-100 notification-card" data-type="bidding">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-trophy"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">You won an auction!</h5>
+                                                <small class="text-muted">5 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1516550893885-985c994c8609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Chinese Porcelain Vase" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Congratulations! You won the auction for <a href="item.html">Chinese Porcelain Vase</a> with a bid of $1,850.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="#" class="btn btn-primary w-100">Complete Purchase</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Notification Card 8 -->
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                                <div class="card h-100 notification-card" data-type="selling">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-money-bill-wave"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Payment received</h5>
+                                                <small class="text-muted">1 week ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1558461560-9d8c2354e19c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="1950s Remington Typewriter" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Payment of $275 has been received for <a href="item.html">1950s Remington Typewriter</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="#" class="btn btn-primary w-100">Ship Item</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Load More Button -->
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary" id="loadMoreBtn">
+                                <i class="fas fa-sync-alt me-1"></i> Load More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bidding Notifications Section -->
+        <section class="bidding-notifications tab-pane fade py-4" id="biddingNotificationsSection" role="tabpanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h3 class="section-subtitle mb-4">Bidding Notifications</h3>
+                        
+                        <div class="row">
+                            <!-- Bidding Notification Cards (filtered from all notifications) -->
+                            <!-- Card 1 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card unread" data-type="bidding">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-danger me-3">
+                                                <i class="fas fa-gavel"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">You've been outbid!</h5>
+                                                <small class="text-muted">10 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="19th Century Oil Painting" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Someone has placed a higher bid of $5,200 on <a href="item.html">19th Century Oil Painting</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="item.html" class="btn btn-primary">Bid Again</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card" data-type="bidding">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-warning me-3">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Auction ending soon</h5>
+                                                <small class="text-muted">Yesterday</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Rolex Submariner" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">The auction for <a href="item.html">Rolex Submariner 1968</a> ends in less than 24 hours.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="item.html" class="btn btn-primary w-100">View Auction</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card" data-type="bidding">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-trophy"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">You won an auction!</h5>
+                                                <small class="text-muted">5 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1516550893885-985c994c8609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Chinese Porcelain Vase" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Congratulations! You won the auction for <a href="item.html">Chinese Porcelain Vase</a> with a bid of $1,850.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="#" class="btn btn-primary w-100">Complete Purchase</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Selling Notifications Section -->
+        <section class="selling-notifications tab-pane fade py-4" id="sellingNotificationsSection" role="tabpanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h3 class="section-subtitle mb-4">Selling Notifications</h3>
+                        
+                        <div class="row">
+                            <!-- Selling Notification Cards (filtered from all notifications) -->
+                            <!-- Card 1 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card unread" data-type="selling">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">New bid on your item!</h5>
+                                                <small class="text-muted">45 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1593078166039-c9878df5c520?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vintage Marantz Turntable" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Someone has placed a bid of $850 on your <a href="item.html">Vintage Marantz Turntable</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="item.html" class="btn btn-primary">View Item</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card" data-type="selling">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-check-circle"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Item listed successfully</h5>
+                                                <small class="text-muted">2 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1606986565168-96fd7c0c95b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Vintage Leica M3 Camera" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Your item <a href="item.html">Vintage Leica M3 Camera (1954)</a> has been listed successfully.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="item.html" class="btn btn-primary w-100">View Listing</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card" data-type="selling">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-success me-3">
+                                                <i class="fas fa-money-bill-wave"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Payment received</h5>
+                                                <small class="text-muted">1 week ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1558461560-9d8c2354e19c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="1950s Remington Typewriter" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">Payment of $275 has been received for <a href="item.html">1950s Remington Typewriter</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="#" class="btn btn-primary w-100">Ship Item</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Account Notifications Section -->
+        <section class="account-notifications tab-pane fade py-4" id="accountNotificationsSection" role="tabpanel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <h3 class="section-subtitle mb-4">Account Notifications</h3>
+                        
+                        <div class="row">
+                            <!-- Account Notification Cards (filtered from all notifications) -->
+                            <!-- Card 1 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card unread" data-type="account">
+                                    <div class="card-status-badge">
+                                        <span class="badge bg-danger">Unread</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-info me-3">
+                                                <i class="fas fa-user-shield"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Security alert</h5>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Security Alert" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">We noticed a login to your account from a new device. If this wasn't you, please secure your account.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <div class="d-flex justify-content-between">
+                                            <a href="#" class="btn btn-primary">Review Activity</a>
+                                            <button class="btn btn-outline-secondary mark-read-btn">Mark as Read</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 notification-card" data-type="account">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="notification-icon bg-primary me-3">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="card-title mb-0">Positive feedback received</h5>
+                                                <small class="text-muted">3 days ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="notification-content mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="User Profile" class="me-2 rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                                <p class="mb-0">You received positive feedback from buyer JohnD123: "Great seller, fast shipping, item as described!"</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white p-3 border-top">
+                                        <a href="profile.html" class="btn btn-primary w-100">View Feedback</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Notification Settings -->
+    <section class="notification-settings py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-4" data-aos="fade-up">
+                    <h3 class="section-subtitle">Notification Settings</h3>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <form id="notificationSettingsForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Email Notifications</h5>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="outbidNotification" checked>
+                                            <label class="form-check-label" for="outbidNotification">
+                                                When I'm outbid
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="auctionEndingNotification" checked>
+                                            <label class="form-check-label" for="auctionEndingNotification">
+                                                When auctions I'm watching are ending soon
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="wonAuctionNotification" checked>
+                                            <label class="form-check-label" for="wonAuctionNotification">
+                                                When I win an auction
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="newBidNotification" checked>
+                                            <label class="form-check-label" for="newBidNotification">
+                                                When someone bids on my items
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="itemSoldNotification" checked>
+                                            <label class="form-check-label" for="itemSoldNotification">
+                                                When my item sells
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Push Notifications</h5>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="pushOutbidNotification" checked>
+                                            <label class="form-check-label" for="pushOutbidNotification">
+                                                When I'm outbid
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="pushAuctionEndingNotification" checked>
+                                            <label class="form-check-label" for="pushAuctionEndingNotification">
+                                                When auctions I'm watching are ending soon
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="pushWonAuctionNotification" checked>
+                                            <label class="form-check-label" for="pushWonAuctionNotification">
+                                                When I win an auction
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="pushNewBidNotification" checked>
+                                            <label class="form-check-label" for="pushNewBidNotification">
+                                                When someone bids on my items
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-switch mb-3">
+                                            <input class="form-check-input" type="checkbox" id="pushItemSoldNotification" checked>
+                                            <label class="form-check-label" for="pushItemSoldNotification">
+                                                When my item sells
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-3">
+                                    <button type="submit" class="btn btn-primary">Save Settings</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <h5>AuctionHub</h5>
+                    <p>The premier online auction platform for unique and collectible items.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="furniture.html">Furniture</a></li>
+                        <li><a href="electronics.html">Electronics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-3">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <h5>Stay Connected</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 AuctionHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                        <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/global.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>

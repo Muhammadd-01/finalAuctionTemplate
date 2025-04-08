@@ -1,0 +1,270 @@
+/* Profile Page Specific Styles */
+
+.profile-header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: var(--card-shadow);
+}
+
+.edit-avatar-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.profile-name {
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.profile-meta {
+  margin-bottom: 1rem;
+}
+
+.profile-rating {
+  margin-bottom: 1rem;
+}
+
+.rating-stars {
+  color: var(--warning-color);
+}
+
+.rating-stars.large {
+  font-size: 2rem;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.profile-bio {
+  color: var(--gray-dark-color);
+}
+
+.profile-tabs {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-tabs .nav-link {
+  color: var(--gray-dark-color);
+  font-weight: 500;
+}
+
+.profile-tabs .nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Dashboard Styles */
+.activity-stat {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--light-color);
+  border-radius: 8px;
+}
+
+.activity-stat h2 {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.activity-stat p {
+  margin-bottom: 0;
+  color: var(--gray-dark-color);
+}
+
+.activity-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.activity-content p {
+  margin-bottom: 0.25rem;
+}
+
+.activity-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.activity-content a:hover {
+  text-decoration: underline;
+}
+
+/* Listings Styles */
+.listing-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.draft-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: var(--gray-light-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-color);
+}
+
+/* Watchlist Styles */
+.remove-watch-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1;
+}
+
+/* Feedback Styles */
+.feedback-summary {
+  margin-bottom: 2rem;
+}
+
+.rating-breakdown {
+  padding: 1rem;
+}
+
+.rating-label {
+  width: 60px;
+  font-size: 0.9rem;
+}
+
+.rating-count {
+  width: 30px;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.feedback-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.feedback-user {
+  font-size: 0.9rem;
+}
+
+.feedback-date {
+  color: var(--gray-color);
+  font-size: 0.8rem;
+}
+
+.feedback-meta {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Settings Styles */
+.payment-method {
+  padding: 1rem;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .listing-img,
+  .draft-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile-header {
+    text-align: center;
+  }
+
+  .edit-profile-btn {
+    margin-top: 1rem;
+  }
+
+  .profile-meta,
+  .profile-rating {
+    justify-content: center;
+  }
+}
